@@ -33,7 +33,7 @@ const ImageCarousel = () => {
   ];
 
   return (
-    <section className="py-0 mt-20">
+    <section className="py-0">
       <div className="max-w-full mx-auto">
         <Carousel 
           className="w-full"

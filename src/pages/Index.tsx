@@ -37,7 +37,7 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-navy px-6 sm:px-8 py-3 text-base sm:text-lg w-full sm:w-auto"
+              className="border-2 border-navy bg-navy text-white hover:bg-navy/90 hover:text-white px-6 sm:px-8 py-3 text-base sm:text-lg w-full sm:w-auto"
             >
               Book a Visit
             </Button>
