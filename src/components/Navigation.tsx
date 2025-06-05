@@ -20,15 +20,15 @@ const Navigation = () => {
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <img 
               src="/lovable-uploads/a1c87734-c5ab-42a6-b0f6-d4236740a573.png" 
               alt="BMRS Group of Schools Logo" 
-              className="h-12 w-12 mr-3"
+              className="h-14 w-14 mr-3"
             />
-            <Link to="/" className="text-xl md:text-2xl font-bold text-navy">
+            <Link to="/" className="text-lg md:text-2xl font-bold text-navy">
               BMRS Group of Schools
             </Link>
           </div>

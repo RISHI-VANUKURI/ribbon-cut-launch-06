@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Statistics from '@/components/Statistics';
@@ -11,7 +12,7 @@ const Index = () => {
       <ImageCarousel />
 
       {/* Hero Section - Now below carousel */}
-      <section className="relative h-screen flex items-center justify-center bg-gradient-to-r from-navy/90 to-blue-800/90">
+      <section className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-r from-navy/90 to-blue-800/90">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -20,23 +21,23 @@ const Index = () => {
         />
         <div className="absolute inset-0 bg-navy/60" />
         
-        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fadeInUp">
+        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 animate-fadeInUp">
             Learning Begins With Us
           </h1>
-          <p className="text-xl md:text-2xl mb-8 animate-fadeIn opacity-90">
+          <p className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 animate-fadeIn opacity-90 leading-relaxed">
             Empowering Young Minds at BMRS Group of Schools
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp">
             <Link to="/about">
-              <Button size="lg" className="bg-gold hover:bg-gold/90 text-white px-8 py-3 text-lg">
+              <Button size="lg" className="bg-gold hover:bg-gold/90 text-white px-6 sm:px-8 py-3 text-base sm:text-lg w-full sm:w-auto">
                 Know More
               </Button>
             </Link>
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-navy px-8 py-3 text-lg"
+              className="border-white text-white hover:bg-white hover:text-navy px-6 sm:px-8 py-3 text-base sm:text-lg w-full sm:w-auto"
             >
               Book a Visit
             </Button>
@@ -45,26 +46,26 @@ const Index = () => {
       </section>
 
       {/* Welcome Section */}
-      <section className="py-16 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div className="animate-slideInLeft">
-              <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-navy mb-4 sm:mb-6">
                 Welcome to BMRS Group of Schools
               </h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6 leading-relaxed">
                 At BMRS, we believe that every child is unique and deserves an education 
                 that nurtures their individual potential. Our comprehensive approach to 
                 learning combines academic excellence with character development, 
                 preparing students for success in an ever-changing world.
               </p>
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed">
                 With over two decades of educational excellence, we have established 
                 ourselves as a trusted institution that values innovation, creativity, 
                 and holistic development.
               </p>
               <Link to="/about">
-                <Button className="bg-navy hover:bg-navy/90 text-white">
+                <Button className="bg-navy hover:bg-navy/90 text-white w-full sm:w-auto">
                   Learn More About Us
                 </Button>
               </Link>
@@ -84,61 +85,61 @@ const Index = () => {
       <Statistics />
 
       {/* Quote Section */}
-      <section className="py-16 bg-navy text-white">
+      <section className="py-12 sm:py-16 bg-navy text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <blockquote className="text-2xl md:text-3xl font-light italic mb-6">
+          <blockquote className="text-xl sm:text-2xl md:text-3xl font-light italic mb-4 sm:mb-6 leading-relaxed">
             "We inspire our students to dream more, learn more, and become more."
           </blockquote>
-          <p className="text-xl opacity-80">- BMRS Group of Schools Philosophy</p>
+          <p className="text-lg sm:text-xl opacity-80">- BMRS Group of Schools Philosophy</p>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-12 sm:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-navy mb-4">
               Why Choose BMRS?
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Discover what makes us the preferred choice for quality education
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
-              <CardContent className="pt-6">
-                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🎓</span>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <Card className="text-center p-4 sm:p-6 hover:shadow-lg transition-shadow">
+              <CardContent className="pt-4 sm:pt-6">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <span className="text-xl sm:text-2xl">🎓</span>
                 </div>
-                <h3 className="text-xl font-semibold text-navy mb-3">Academic Excellence</h3>
-                <p className="text-gray-600">
+                <h3 className="text-lg sm:text-xl font-semibold text-navy mb-2 sm:mb-3">Academic Excellence</h3>
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                   Comprehensive curriculum designed to challenge and inspire students 
                   to achieve their academic potential.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
-              <CardContent className="pt-6">
-                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🌟</span>
+            <Card className="text-center p-4 sm:p-6 hover:shadow-lg transition-shadow">
+              <CardContent className="pt-4 sm:pt-6">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <span className="text-xl sm:text-2xl">🌟</span>
                 </div>
-                <h3 className="text-xl font-semibold text-navy mb-3">Holistic Development</h3>
-                <p className="text-gray-600">
+                <h3 className="text-lg sm:text-xl font-semibold text-navy mb-2 sm:mb-3">Holistic Development</h3>
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                   Focus on overall personality development including sports, arts, 
                   and extracurricular activities.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
-              <CardContent className="pt-6">
-                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">👥</span>
+            <Card className="text-center p-4 sm:p-6 hover:shadow-lg transition-shadow sm:col-span-2 lg:col-span-1">
+              <CardContent className="pt-4 sm:pt-6">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <span className="text-xl sm:text-2xl">👥</span>
                 </div>
-                <h3 className="text-xl font-semibold text-navy mb-3">Expert Faculty</h3>
-                <p className="text-gray-600">
+                <h3 className="text-lg sm:text-xl font-semibold text-navy mb-2 sm:mb-3">Expert Faculty</h3>
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                   Highly qualified and experienced teachers committed to 
                   student success and growth.
                 </p>
@@ -149,23 +150,23 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-navy mb-4 sm:mb-6">
             Ready to Begin Your Journey?
           </h2>
-          <p className="text-lg text-gray-600 mb-8">
+          <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed">
             Join our community of learners and discover the BMRS difference. 
             Schedule a campus visit today!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
-              <Button size="lg" className="bg-gold hover:bg-gold/90 text-white px-8">
+              <Button size="lg" className="bg-gold hover:bg-gold/90 text-white px-6 sm:px-8 w-full sm:w-auto">
                 Schedule Campus Visit
               </Button>
             </Link>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-navy text-navy hover:bg-navy hover:text-white px-8">
+              <Button size="lg" variant="outline" className="border-navy text-navy hover:bg-navy hover:text-white px-6 sm:px-8 w-full sm:w-auto">
                 Contact Us
               </Button>
             </Link>

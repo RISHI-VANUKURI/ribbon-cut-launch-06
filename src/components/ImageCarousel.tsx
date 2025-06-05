@@ -33,7 +33,7 @@ const ImageCarousel = () => {
   ];
 
   return (
-    <section className="py-0">
+    <section className="py-0 mt-20">
       <div className="max-w-full mx-auto">
         <Carousel 
           className="w-full"
@@ -50,19 +50,19 @@ const ImageCarousel = () => {
           <CarouselContent>
             {images.map((image, index) => (
               <CarouselItem key={index}>
-                <div className="relative h-[60vh] md:h-[70vh] overflow-hidden">
+                <div className="relative h-[50vh] sm:h-[55vh] md:h-[65vh] lg:h-[70vh] xl:h-[75vh] overflow-hidden">
                   <img
                     src={image.src}
                     alt={image.alt}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-center"
                   />
-                  <div className="absolute inset-0 bg-black/30"></div>
+                  <div className="absolute inset-0 bg-black/40"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center text-white max-w-4xl mx-auto px-4">
-                      <h2 className="text-3xl md:text-5xl font-bold mb-4">
+                    <div className="text-center text-white max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">
                         Life at BMRS
                       </h2>
-                      <p className="text-lg md:text-xl opacity-90">
+                      <p className="text-base sm:text-lg md:text-xl lg:text-2xl opacity-90 leading-relaxed">
                         Discover the vibrant campus life, activities, and memorable moments at BMRS Group of Schools
                       </p>
                     </div>
@@ -71,8 +71,8 @@ const ImageCarousel = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="left-4" />
-          <CarouselNext className="right-4" />
+          <CarouselPrevious className="left-2 sm:left-4 h-8 w-8 sm:h-10 sm:w-10" />
+          <CarouselNext className="right-2 sm:right-4 h-8 w-8 sm:h-10 sm:w-10" />
         </Carousel>
       </div>
     </section>
