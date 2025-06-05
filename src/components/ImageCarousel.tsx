@@ -50,7 +50,7 @@ const ImageCarousel = () => {
           <CarouselContent>
             {images.map((image, index) => (
               <CarouselItem key={index}>
-                <div className="relative h-[50vh] sm:h-[55vh] md:h-[65vh] lg:h-[70vh] xl:h-[75vh] overflow-hidden">
+                <div className="relative h-[60vh] sm:h-[65vh] md:h-[75vh] lg:h-[80vh] xl:h-[85vh] overflow-hidden">
                   <img
                     src={image.src}
                     alt={image.alt}
