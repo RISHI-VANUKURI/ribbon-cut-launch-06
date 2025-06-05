@@ -6,6 +6,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const ImageCarousel = () => {
   const images = [
@@ -32,36 +33,46 @@ const ImageCarousel = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
-            Life at BMRS
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Discover the vibrant campus life, activities, and memorable moments at BMRS Group of Schools
-          </p>
-        </div>
-        
-        <Carousel className="w-full max-w-5xl mx-auto">
+    <section className="py-0">
+      <div className="max-w-full mx-auto">
+        <Carousel 
+          className="w-full"
+          plugins={[
+            Autoplay({
+              delay: 4000,
+            }),
+          ]}
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+        >
           <CarouselContent>
             {images.map((image, index) => (
               <CarouselItem key={index}>
-                <div className="p-1">
-                  <div className="relative h-96 md:h-[500px] rounded-lg overflow-hidden shadow-lg">
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/20"></div>
+                <div className="relative h-[60vh] md:h-[70vh] overflow-hidden">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/30"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center text-white max-w-4xl mx-auto px-4">
+                      <h2 className="text-3xl md:text-5xl font-bold mb-4">
+                        Life at BMRS
+                      </h2>
+                      <p className="text-lg md:text-xl opacity-90">
+                        Discover the vibrant campus life, activities, and memorable moments at BMRS Group of Schools
+                      </p>
+                    </div>
                   </div>
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className="left-4" />
+          <CarouselNext className="right-4" />
         </Carousel>
       </div>
     </section>

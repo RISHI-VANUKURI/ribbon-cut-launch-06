@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Statistics from '@/components/Statistics';
@@ -8,7 +7,10 @@ import { Link } from 'react-router-dom';
 const Index = () => {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
+      {/* Image Carousel Section - Now at the top */}
+      <ImageCarousel />
+
+      {/* Hero Section - Now below carousel */}
       <section className="relative h-screen flex items-center justify-center bg-gradient-to-r from-navy/90 to-blue-800/90">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -77,9 +79,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* Image Carousel Section */}
-      <ImageCarousel />
 
       {/* Statistics Section */}
       <Statistics />
