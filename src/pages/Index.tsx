@@ -2,6 +2,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Statistics from '@/components/Statistics';
+import ImageCarousel from '@/components/ImageCarousel';
 import { Link } from 'react-router-dom';
 
 const Index = () => {
@@ -76,6 +77,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Image Carousel Section */}
+      <ImageCarousel />
 
       {/* Statistics Section */}
       <Statistics />
