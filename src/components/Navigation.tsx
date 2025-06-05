@@ -26,7 +26,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/a1c87734-c5ab-42a6-b0f6-d4236740a573.png" 
               alt="BMRS Group of Schools Logo" 
-              className="h-14 w-14 mr-3"
+              className="h-16 w-16 mr-3 rounded-full object-cover border-2 border-navy"
             />
             <Link to="/" className="text-lg md:text-2xl font-bold text-navy">
               BMRS Group of Schools
