@@ -20,21 +20,27 @@ const Navigation = () => {
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-[85px]">
-          {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
+        <div className="flex justify-between items-center h-[95px]">
+          {/* Logo - moved to complete left */}
+          <div className="flex items-center">
             <img 
               src="/lovable-uploads/a1c87734-c5ab-42a6-b0f6-d4236740a573.png" 
               alt="BMRS Group of Schools Logo" 
               className="h-20 w-20 mr-3 rounded-full object-cover border-3 border-navy shadow-lg"
             />
             <Link to="/" className="flex flex-col">
-              <span className="text-xl md:text-3xl font-bold text-navy leading-tight" 
-                    style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5), -1px -1px 2px rgba(255,255,255,0.8)', WebkitTextStroke: '1px rgba(0,0,0,0.2)' }}>
+              <span className="text-xl md:text-3xl font-bold leading-tight text-yellow-400" 
+                    style={{ 
+                      textShadow: '2px 2px 4px rgba(0,0,0,0.5), -1px -1px 2px rgba(255,255,255,0.8)', 
+                      WebkitTextStroke: '1px #dc2626'
+                    }}>
                 BMRS
               </span>
-              <span className="text-sm md:text-lg font-semibold text-navy leading-tight" 
-                    style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5), -1px -1px 2px rgba(255,255,255,0.8)', WebkitTextStroke: '0.5px rgba(0,0,0,0.2)' }}>
+              <span className="text-sm md:text-lg font-semibold leading-tight text-red-600" 
+                    style={{ 
+                      textShadow: '2px 2px 4px rgba(0,0,0,0.5), -1px -1px 2px rgba(255,255,255,0.8)', 
+                      WebkitTextStroke: '0.5px #fbbf24'
+                    }}>
                 Group of Schools
               </span>
             </Link>
