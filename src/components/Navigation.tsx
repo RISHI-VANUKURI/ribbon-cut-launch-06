@@ -26,10 +26,17 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/a1c87734-c5ab-42a6-b0f6-d4236740a573.png" 
               alt="BMRS Group of Schools Logo" 
-              className="h-16 w-16 mr-3 rounded-full object-cover border-2 border-navy"
+              className="h-20 w-20 mr-3 rounded-full object-cover border-3 border-navy shadow-lg"
             />
-            <Link to="/" className="text-lg md:text-2xl font-bold text-navy">
-              BMRS Group of Schools
+            <Link to="/" className="flex flex-col">
+              <span className="text-xl md:text-3xl font-bold text-navy leading-tight" 
+                    style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.3), -1px -1px 2px rgba(255,255,255,0.8)' }}>
+                BMRS
+              </span>
+              <span className="text-sm md:text-lg font-semibold text-navy leading-tight" 
+                    style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.3), -1px -1px 2px rgba(255,255,255,0.8)' }}>
+                Group of Schools
+              </span>
             </Link>
           </div>
 
