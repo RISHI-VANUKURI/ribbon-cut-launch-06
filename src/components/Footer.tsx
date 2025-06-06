@@ -46,10 +46,10 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-2 text-gray-300">
-              <p>📍 123 Education Street, Learning City, LC 12345</p>
-              <p>📞 +1 (555) 123-4567</p>
-              <p>✉️ info@bmrsschools.edu</p>
-              <p>🕒 Mon - Fri: 8:00 AM - 4:00 PM</p>
+              <p>📍 H NO 3-101/1, GANESH NAGAR COLONY, MAIN ROAD, CHENGICHERLA, India</p>
+              <p>📞 +91 9959733822</p>
+              <p>✉️ bmrsghs2024@gmail.com</p>
+              <p>🕒 Mon - Fri: 9:30 a.m. – 4:00 p.m.</p>
             </div>
           </div>
         </div>

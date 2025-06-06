@@ -239,7 +239,7 @@ const Contact = () => {
           <div className="text-center mb-8 animate-fadeInUp">
             <h2 className="text-3xl font-bold text-navy mb-4">Find Us</h2>
             <p className="text-lg text-gray-600">
-              Conveniently located in the heart of the educational district
+              Conveniently located in Chengicherla
             </p>
           </div>
           <div className="w-full h-96 bg-gray-200 rounded-lg flex items-center justify-center animate-slideInUp">
