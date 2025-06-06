@@ -1,10 +1,9 @@
-
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Youtube, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-navy text-white">
+    <footer className="bg-navy text-white animate-slideUpIn">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* School Info */}

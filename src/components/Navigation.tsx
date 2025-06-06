@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -18,7 +17,7 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50 w-full mx-0 my-2 rounded-2xl animate-slideInUp">
+    <nav className="bg-white shadow-md sticky top-0 z-50 w-full mx-0 my-2 rounded-2xl animate-slideDownIn">
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-[95px]">
           {/* Logo - moved to complete left */}
