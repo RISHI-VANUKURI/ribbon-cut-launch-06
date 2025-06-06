@@ -36,13 +36,15 @@ const Index = () => {
                 Know More
               </Button>
             </Link>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-2 border-navy bg-navy text-white hover:bg-navy/90 hover:text-white px-6 sm:px-8 py-3 text-base sm:text-lg w-full sm:w-auto hover-lift animate-scaleIn delay-600"
-            >
-              Book a Visit
-            </Button>
+            <Link to="/contact">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-navy px-6 sm:px-8 py-3 text-base sm:text-lg w-full sm:w-auto hover-lift animate-scaleIn delay-600 transition-all duration-300"
+              >
+                Book a Visit
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
