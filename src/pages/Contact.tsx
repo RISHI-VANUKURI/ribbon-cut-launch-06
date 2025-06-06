@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -60,8 +59,8 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-navy mb-2">Address</h3>
                       <p className="text-gray-600">
-                        123 Education Street<br />
-                        Learning City, LC 12345<br />
+                        H NO 3-101/1, GANESH NAGAR COLONY,<br />
+                        MAIN ROAD, CHENGICHERLA<br />
                         India
                       </p>
                     </div>
@@ -76,8 +75,7 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-navy mb-2">Phone</h3>
                       <p className="text-gray-600">
-                        Main Office: +1 (555) 123-4567<br />
-                        Admissions: +1 (555) 123-4568
+                        Contact us for more information
                       </p>
                     </div>
                   </CardContent>

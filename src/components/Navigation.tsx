@@ -20,7 +20,7 @@ const Navigation = () => {
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-[85px]">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <img 
@@ -30,11 +30,11 @@ const Navigation = () => {
             />
             <Link to="/" className="flex flex-col">
               <span className="text-xl md:text-3xl font-bold text-navy leading-tight" 
-                    style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.3), -1px -1px 2px rgba(255,255,255,0.8)' }}>
+                    style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5), -1px -1px 2px rgba(255,255,255,0.8)', WebkitTextStroke: '1px rgba(0,0,0,0.2)' }}>
                 BMRS
               </span>
               <span className="text-sm md:text-lg font-semibold text-navy leading-tight" 
-                    style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.3), -1px -1px 2px rgba(255,255,255,0.8)' }}>
+                    style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5), -1px -1px 2px rgba(255,255,255,0.8)', WebkitTextStroke: '0.5px rgba(0,0,0,0.2)' }}>
                 Group of Schools
               </span>
             </Link>
