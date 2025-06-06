@@ -6,7 +6,7 @@ const About = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-navy to-blue-800 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fadeInUp">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">About BMRS Group of Schools</h1>
           <p className="text-xl max-w-3xl mx-auto">
             A legacy of educational excellence, nurturing young minds for over two decades
@@ -18,7 +18,7 @@ const About = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="animate-slideInLeft">
               <h2 className="text-3xl font-bold text-navy mb-6">Our Story</h2>
               <p className="text-lg text-gray-600 mb-6">
                 Founded with a vision to provide quality education that goes beyond textbooks, 
@@ -33,11 +33,11 @@ const About = () => {
                 programs and dedicated faculty.
               </p>
             </div>
-            <div>
+            <div className="animate-slideInRight">
               <img
                 src="https://images.unsplash.com/photo-1523050854058-8df90110c9d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
                 alt="School building"
-                className="rounded-lg shadow-xl"
+                className="rounded-lg shadow-xl hover-scale"
               />
             </div>
           </div>
@@ -47,7 +47,7 @@ const About = () => {
       {/* Vision, Mission, Values */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
               Our Foundation
             </h2>
@@ -57,9 +57,9 @@ const About = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+            <Card className="text-center p-8 hover:shadow-lg transition-shadow animate-cardFloat hover-lift">
               <CardContent>
-                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-6 animate-bounceIn">
                   <span className="text-2xl">👁️</span>
                 </div>
                 <h3 className="text-2xl font-bold text-navy mb-4">Vision</h3>
@@ -70,9 +70,9 @@ const About = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+            <Card className="text-center p-8 hover:shadow-lg transition-shadow animate-cardFloat delay-200 hover-lift">
               <CardContent>
-                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-6 animate-bounceIn delay-200">
                   <span className="text-2xl">🎯</span>
                 </div>
                 <h3 className="text-2xl font-bold text-navy mb-4">Mission</h3>
@@ -83,9 +83,9 @@ const About = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center p-8 hover:shadow-lg transition-shadow">
+            <Card className="text-center p-8 hover:shadow-lg transition-shadow animate-cardFloat delay-400 hover-lift">
               <CardContent>
-                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-6 animate-bounceIn delay-400">
                   <span className="text-2xl">💎</span>
                 </div>
                 <h3 className="text-2xl font-bold text-navy mb-4">Values</h3>
@@ -103,14 +103,14 @@ const About = () => {
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-12 items-center">
-            <div className="lg:col-span-1">
+            <div className="lg:col-span-1 animate-slideInLeft">
               <img
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80"
                 alt="Principal"
-                className="rounded-lg shadow-lg w-full"
+                className="rounded-lg shadow-lg w-full hover-scale"
               />
             </div>
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2 animate-slideInRight">
               <h2 className="text-3xl font-bold text-navy mb-6">Principal's Message</h2>
               <blockquote className="text-lg text-gray-600 italic mb-6">
                 "Education is not just about filling minds with knowledge; it's about 
@@ -136,7 +136,7 @@ const About = () => {
       {/* Campus Highlights */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
               Campus Highlights
             </h2>
@@ -156,9 +156,9 @@ const About = () => {
               { title: "Auditorium", icon: "🎭", description: "State-of-the-art venue for events and performances" },
               { title: "Cafeteria", icon: "🍽️", description: "Nutritious meals in a comfortable setting" }
             ].map((facility, index) => (
-              <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
+              <Card key={index} className={`text-center p-6 hover:shadow-lg transition-shadow animate-cardFloat delay-${(index % 4 + 1) * 100} hover-lift`}>
                 <CardContent>
-                  <div className="text-3xl mb-3">{facility.icon}</div>
+                  <div className="text-3xl mb-3 animate-bounceIn delay-300">{facility.icon}</div>
                   <h3 className="font-semibold text-navy mb-2">{facility.title}</h3>
                   <p className="text-sm text-gray-600">{facility.description}</p>
                 </CardContent>
@@ -171,13 +171,13 @@ const About = () => {
       {/* Google Maps */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
+          <div className="text-center mb-8 animate-fadeInUp">
             <h2 className="text-3xl font-bold text-navy mb-4">Visit Our Campus</h2>
             <p className="text-lg text-gray-600">
               Located in the heart of the educational district
             </p>
           </div>
-          <div className="w-full h-96 bg-gray-200 rounded-lg flex items-center justify-center">
+          <div className="w-full h-96 bg-gray-200 rounded-lg flex items-center justify-center animate-slideInUp">
             <p className="text-gray-500">Google Maps integration will be placed here</p>
           </div>
         </div>

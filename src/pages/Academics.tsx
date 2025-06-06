@@ -6,7 +6,7 @@ const Academics = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-navy to-blue-800 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fadeInUp">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Academics</h1>
           <p className="text-xl max-w-3xl mx-auto">
             Comprehensive curriculum designed to nurture academic excellence and critical thinking
@@ -17,7 +17,7 @@ const Academics = () => {
       {/* Curriculum Overview */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
               Curriculum Overview
             </h2>
@@ -28,9 +28,9 @@ const Academics = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="p-8 hover:shadow-lg transition-shadow">
+            <Card className="p-8 hover:shadow-lg transition-shadow animate-cardFloat hover-lift">
               <CardContent>
-                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-6 animate-bounceIn">
                   <span className="text-2xl">🌱</span>
                 </div>
                 <h3 className="text-2xl font-bold text-navy mb-4 text-center">Kindergarten</h3>
@@ -48,9 +48,9 @@ const Academics = () => {
               </CardContent>
             </Card>
 
-            <Card className="p-8 hover:shadow-lg transition-shadow">
+            <Card className="p-8 hover:shadow-lg transition-shadow animate-cardFloat delay-200 hover-lift">
               <CardContent>
-                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-6 animate-bounceIn delay-200">
                   <span className="text-2xl">📚</span>
                 </div>
                 <h3 className="text-2xl font-bold text-navy mb-4 text-center">Primary School</h3>
@@ -68,9 +68,9 @@ const Academics = () => {
               </CardContent>
             </Card>
 
-            <Card className="p-8 hover:shadow-lg transition-shadow">
+            <Card className="p-8 hover:shadow-lg transition-shadow animate-cardFloat delay-400 hover-lift">
               <CardContent>
-                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-6 animate-bounceIn delay-400">
                   <span className="text-2xl">🎓</span>
                 </div>
                 <h3 className="text-2xl font-bold text-navy mb-4 text-center">High School</h3>
@@ -94,7 +94,7 @@ const Academics = () => {
       {/* Subject Areas */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
               Subject Areas
             </h2>
@@ -136,9 +136,9 @@ const Academics = () => {
                 description: "Creative expression through visual arts, music, dance, and drama programs."
               }
             ].map((subject, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+              <Card key={index} className={`p-6 hover:shadow-lg transition-shadow animate-cardFloat delay-${(index % 3 + 1) * 100} hover-lift`}>
                 <CardContent>
-                  <div className="text-4xl mb-4">{subject.icon}</div>
+                  <div className={`text-4xl mb-4 animate-bounceIn delay-${(index % 3 + 1) * 200}`}>{subject.icon}</div>
                   <h3 className="text-xl font-bold text-navy mb-3">{subject.title}</h3>
                   <p className="text-gray-600">{subject.description}</p>
                 </CardContent>
@@ -152,7 +152,7 @@ const Academics = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="animate-slideInLeft">
               <h2 className="text-3xl font-bold text-navy mb-6">Teaching Methodology</h2>
               <p className="text-lg text-gray-600 mb-6">
                 Our innovative teaching approach combines traditional educational values 
@@ -161,7 +161,7 @@ const Academics = () => {
               </p>
               
               <div className="space-y-4">
-                <div className="flex items-start space-x-3">
+                <div className="flex items-start space-x-3 animate-slideInUp">
                   <div className="w-6 h-6 bg-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-white text-sm">✓</span>
                   </div>
@@ -171,7 +171,7 @@ const Academics = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-start space-x-3">
+                <div className="flex items-start space-x-3 animate-slideInUp delay-100">
                   <div className="w-6 h-6 bg-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-white text-sm">✓</span>
                   </div>
@@ -181,7 +181,7 @@ const Academics = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-start space-x-3">
+                <div className="flex items-start space-x-3 animate-slideInUp delay-200">
                   <div className="w-6 h-6 bg-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-white text-sm">✓</span>
                   </div>
@@ -191,7 +191,7 @@ const Academics = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-start space-x-3">
+                <div className="flex items-start space-x-3 animate-slideInUp delay-300">
                   <div className="w-6 h-6 bg-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-white text-sm">✓</span>
                   </div>
@@ -202,11 +202,11 @@ const Academics = () => {
                 </div>
               </div>
             </div>
-            <div>
+            <div className="animate-slideInRight">
               <img
                 src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
                 alt="Teaching methodology"
-                className="rounded-lg shadow-xl"
+                className="rounded-lg shadow-xl hover-scale"
               />
             </div>
           </div>
@@ -216,7 +216,7 @@ const Academics = () => {
       {/* Assessment System */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
               Student Assessment System
             </h2>
@@ -227,7 +227,7 @@ const Academics = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="p-8">
+            <Card className="p-8 animate-cardFloat hover-lift">
               <CardContent>
                 <h3 className="text-xl font-bold text-navy mb-4">Continuous Assessment</h3>
                 <ul className="space-y-3 text-gray-600">
@@ -240,7 +240,7 @@ const Academics = () => {
               </CardContent>
             </Card>
 
-            <Card className="p-8">
+            <Card className="p-8 animate-cardFloat delay-200 hover-lift">
               <CardContent>
                 <h3 className="text-xl font-bold text-navy mb-4">Holistic Evaluation</h3>
                 <ul className="space-y-3 text-gray-600">

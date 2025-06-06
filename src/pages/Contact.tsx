@@ -35,7 +35,7 @@ const Contact = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-navy to-blue-800 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fadeInUp">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
           <p className="text-xl max-w-3xl mx-auto">
             Get in touch with us to learn more about BMRS or schedule a campus visit
@@ -48,13 +48,13 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
-            <div>
+            <div className="animate-slideInLeft">
               <h2 className="text-3xl font-bold text-navy mb-8">Get in Touch</h2>
               
               <div className="space-y-6">
-                <Card className="p-6">
+                <Card className="p-6 hover-lift animate-cardFloat">
                   <CardContent className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0 animate-bounceIn">
                       <span className="text-white text-xl">📍</span>
                     </div>
                     <div>
@@ -68,9 +68,9 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="p-6">
+                <Card className="p-6 hover-lift animate-cardFloat delay-200">
                   <CardContent className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0 animate-bounceIn delay-200">
                       <span className="text-white text-xl">📞</span>
                     </div>
                     <div>
@@ -83,9 +83,9 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="p-6">
+                <Card className="p-6 hover-lift animate-cardFloat delay-400">
                   <CardContent className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0 animate-bounceIn delay-400">
                       <span className="text-white text-xl">✉️</span>
                     </div>
                     <div>
@@ -98,9 +98,9 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="p-6">
+                <Card className="p-6 hover-lift animate-cardFloat delay-600">
                   <CardContent className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0 animate-bounceIn delay-600">
                       <span className="text-white text-xl">🕒</span>
                     </div>
                     <div>
@@ -116,16 +116,16 @@ const Contact = () => {
               </div>
 
               {/* Social Media */}
-              <div className="mt-8">
+              <div className="mt-8 animate-fadeInUp delay-300">
                 <h3 className="text-xl font-semibold text-navy mb-4">Follow Us</h3>
                 <div className="flex space-x-4">
-                  <a href="#" className="w-10 h-10 bg-navy rounded-full flex items-center justify-center text-white hover:bg-gold transition-colors">
+                  <a href="#" className="w-10 h-10 bg-navy rounded-full flex items-center justify-center text-white hover:bg-gold transition-colors hover-scale">
                     <span>f</span>
                   </a>
-                  <a href="#" className="w-10 h-10 bg-navy rounded-full flex items-center justify-center text-white hover:bg-gold transition-colors">
+                  <a href="#" className="w-10 h-10 bg-navy rounded-full flex items-center justify-center text-white hover:bg-gold transition-colors hover-scale">
                     <span>📷</span>
                   </a>
-                  <a href="#" className="w-10 h-10 bg-navy rounded-full flex items-center justify-center text-white hover:bg-gold transition-colors">
+                  <a href="#" className="w-10 h-10 bg-navy rounded-full flex items-center justify-center text-white hover:bg-gold transition-colors hover-scale">
                     <span>🐦</span>
                   </a>
                 </div>
@@ -133,13 +133,13 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <div>
-              <Card className="p-8">
+            <div className="animate-slideInRight">
+              <Card className="p-8 hover-lift">
                 <CardContent>
                   <h2 className="text-2xl font-bold text-navy mb-6">Send us a Message</h2>
                   
                   <form onSubmit={handleSubmit} className="space-y-6">
-                    <div>
+                    <div className="animate-slideInUp">
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                         Full Name *
                       </label>
@@ -155,7 +155,7 @@ const Contact = () => {
                       />
                     </div>
 
-                    <div>
+                    <div className="animate-slideInUp delay-100">
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                         Email Address *
                       </label>
@@ -171,7 +171,7 @@ const Contact = () => {
                       />
                     </div>
 
-                    <div>
+                    <div className="animate-slideInUp delay-200">
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                         Phone Number
                       </label>
@@ -186,7 +186,7 @@ const Contact = () => {
                       />
                     </div>
 
-                    <div>
+                    <div className="animate-slideInUp delay-300">
                       <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                         Message *
                       </label>
@@ -202,7 +202,7 @@ const Contact = () => {
                       />
                     </div>
 
-                    <Button type="submit" className="w-full bg-gold hover:bg-gold/90 text-white">
+                    <Button type="submit" className="w-full bg-gold hover:bg-gold/90 text-white hover-lift animate-fadeInUp delay-400">
                       Send Message
                     </Button>
                   </form>
@@ -215,7 +215,7 @@ const Contact = () => {
 
       {/* Campus Visit CTA */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 animate-fadeInUp">
           <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6">
             Schedule a Campus Visit
           </h2>
@@ -224,10 +224,10 @@ const Contact = () => {
             see our facilities, meet our faculty, and discover what makes us special.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-navy hover:bg-navy/90 text-white px-8">
+            <Button size="lg" className="bg-navy hover:bg-navy/90 text-white px-8 hover-lift">
               Schedule Visit
             </Button>
-            <Button size="lg" variant="outline" className="border-gold text-gold hover:bg-gold hover:text-white px-8">
+            <Button size="lg" variant="outline" className="border-gold text-gold hover:bg-gold hover:text-white px-8 hover-lift">
               Download Brochure
             </Button>
           </div>
@@ -237,13 +237,13 @@ const Contact = () => {
       {/* Map Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
+          <div className="text-center mb-8 animate-fadeInUp">
             <h2 className="text-3xl font-bold text-navy mb-4">Find Us</h2>
             <p className="text-lg text-gray-600">
               Conveniently located in the heart of the educational district
             </p>
           </div>
-          <div className="w-full h-96 bg-gray-200 rounded-lg flex items-center justify-center">
+          <div className="w-full h-96 bg-gray-200 rounded-lg flex items-center justify-center animate-slideInUp">
             <div className="text-center">
               <div className="text-4xl mb-4">🗺️</div>
               <p className="text-gray-500 text-lg">Interactive Google Maps will be embedded here</p>
