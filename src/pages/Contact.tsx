@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -75,7 +76,9 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-navy mb-2">Phone</h3>
                       <p className="text-gray-600">
-                        Contact us for more information
+                        Main Office<br />
+                        +91 9959733822<br />
+                        9:30 a.m. – 4:00 p.m.
                       </p>
                     </div>
                   </CardContent>
@@ -89,8 +92,7 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-navy mb-2">Email</h3>
                       <p className="text-gray-600">
-                        General: info@bmrsschools.edu<br />
-                        Admissions: admissions@bmrsschools.edu
+                        bmrsghs2024@gmail.com
                       </p>
                     </div>
                   </CardContent>
@@ -104,8 +106,8 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-navy mb-2">Office Hours</h3>
                       <p className="text-gray-600">
-                        Monday - Friday: 8:00 AM - 4:00 PM<br />
-                        Saturday: 9:00 AM - 1:00 PM<br />
+                        Monday - Friday: 9:30 a.m. – 4:00 p.m.<br />
+                        Saturday: Contact for availability<br />
                         Sunday: Closed
                       </p>
                     </div>
@@ -232,7 +234,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 animate-fadeInUp">
