@@ -23,7 +23,7 @@ const App = () => (
       <BrowserRouter>
         <div className="min-h-screen flex flex-col">
           <Navigation />
-          <main className="flex-grow">
+          <main className="flex-grow pt-4">
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/about" element={<About />} />
