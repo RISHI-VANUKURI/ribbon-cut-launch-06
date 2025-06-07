@@ -1,10 +1,10 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import { Navigation } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -31,20 +31,10 @@ const Contact = () => {
     });
   };
 
-  const branches = [
-    {
-      name: "🏫 Ganesh Nagar Campus",
-      address: "📍 # 3-101/1, Chengicherla Main Road, Chengicherla, Hyderabad, Telangana 500038",
-      phone: "📞 9959733822",
-      email: "bmrsghs2024@gmail.com"
-    },
-    {
-      name: "🏫 Kranthi Colony Campus", 
-      address: "📍 Kranthi Colony, Rd No. 2, Bolligudem, Telephone Colony, Chengicherla, Secunderabad, Telangana 500092",
-      phone: "📞 9502022984",
-      email: "bmrsghs2024@gmail.com"
-    }
-  ];
+  const openDirections = (address: string) => {
+    const encodedAddress = encodeURIComponent(address);
+    window.open(`https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`, '_blank');
+  };
 
   return (
     <div className="min-h-screen">
@@ -58,35 +48,90 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Branch Information Section */}
-      <section className="py-16 bg-gray-50">
+      {/* Campus Locations */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl font-bold text-navy mb-4">Our Campus Locations</h2>
-            <p className="text-lg text-gray-600">Visit either of our campuses for admissions and inquiries</p>
+            <p className="text-lg text-gray-600">
+              Visit either of our campuses for admissions and inquiries
+            </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {branches.map((branch, index) => (
-              <Card key={index} className="p-6 hover-lift animate-cardFloat" style={{animationDelay: `${index * 200}ms`}}>
-                <CardContent className="text-center">
-                  <h3 className="text-xl font-bold text-navy mb-4 animate-fadeInUp">
-                    {branch.name}
-                  </h3>
-                  <div className="space-y-3">
-                    <p className="text-gray-600 animate-slideInLeft text-sm">
-                      {branch.address}
-                    </p>
-                    <p className="text-gray-600 animate-slideInLeft delay-100">
-                      {branch.phone}
-                    </p>
-                    <p className="text-gray-600 animate-slideInLeft delay-200">
-                      ✉️ {branch.email}
-                    </p>
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Ganesh Nagar Campus */}
+            <div className="animate-slideInUp">
+              <Card className="overflow-hidden shadow-lg hover-lift">
+                <CardContent className="p-0">
+                  <div className="bg-gray-200 h-64 relative">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.8754847890543!2d78.56285437595158!3d17.469953500956753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaea09c7%3A0x9c6e5c7b9c6e5c7b!2s3-101%2F1%2C%20Chengicherla%20Main%20Rd%2C%20Chengicherla%2C%20Hyderabad%2C%20Telangana%20500038!5e0!3m2!1sen!2sin!4v1635000000000!5m2!1sen!2sin"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="BMRS Grammar High School - Ganesh Nagar Campus"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-navy mb-4">BMRS GRAMMAR HIGH SCHOOL</h3>
+                    <div className="space-y-3 mb-4">
+                      <p className="text-gray-600 text-sm">
+                        📍 # 3-101/1, Chengicherla Main Road, Chengicherla, Hyderabad, Telangana 500038
+                      </p>
+                      <p className="text-gray-600">📞 +91 9959733822</p>
+                      <p className="text-gray-600">✉️ bmrsghs2024@gmail.com</p>
+                    </div>
+                    <Button 
+                      onClick={() => openDirections("# 3-101/1, Chengicherla Main Road, Chengicherla, Hyderabad, Telangana 500038")}
+                      className="w-full bg-gold hover:bg-gold/90 text-white"
+                    >
+                      <Navigation className="w-4 h-4 mr-2" />
+                      Get Directions
+                    </Button>
                   </div>
                 </CardContent>
               </Card>
-            ))}
+            </div>
+
+            {/* Kranthi Colony Campus */}
+            <div className="animate-slideInUp delay-200">
+              <Card className="overflow-hidden shadow-lg hover-lift">
+                <CardContent className="p-0">
+                  <div className="bg-gray-200 h-64 relative">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.8754847890543!2d78.56285437595158!3d17.469953500956753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaea09c7%3A0x9c6e5c7b9c6e5c7b!2sKranthi%20Colony%2C%20Rd%20No.%202%2C%20Bolligudem%2C%20Telephone%20Colony%2C%20Chengicherla%2C%20Secunderabad%2C%20Telangana%20500092!5e0!3m2!1sen!2sin!4v1635000000000!5m2!1sen!2sin"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="BMRS Grammar School - Kranthi Colony Campus"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-navy mb-4">BMRS GRAMMAR SCHOOL</h3>
+                    <div className="space-y-3 mb-4">
+                      <p className="text-gray-600 text-sm">
+                        📍 Kranthi Colony, Rd No. 2, Bolligudem, Telephone Colony, Chengicherla, Secunderabad, Telangana 500092
+                      </p>
+                      <p className="text-gray-600">📞 +91 9502022984</p>
+                      <p className="text-gray-600">✉️ bmrsghs2024@gmail.com</p>
+                    </div>
+                    <Button 
+                      onClick={() => openDirections("Kranthi Colony, Rd No. 2, Bolligudem, Telephone Colony, Chengicherla, Secunderabad, Telangana 500092")}
+                      className="w-full bg-gold hover:bg-gold/90 text-white"
+                    >
+                      <Navigation className="w-4 h-4 mr-2" />
+                      Get Directions
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>

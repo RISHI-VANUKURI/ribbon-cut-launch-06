@@ -42,8 +42,8 @@ const About = () => {
             </div>
             <div className="animate-slideInRight">
               <img
-                src="https://images.unsplash.com/photo-1523050854058-8df90110c9d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                alt="School building"
+                src="/lovable-uploads/1bd97367-f28f-41ab-aca0-b515339a825b.png"
+                alt="BMRS School Building"
                 className="rounded-lg shadow-xl hover-scale"
               />
             </div>
