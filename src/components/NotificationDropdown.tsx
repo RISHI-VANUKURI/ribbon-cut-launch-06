@@ -45,16 +45,21 @@ const NotificationDropdown = () => {
         <Button 
           variant="ghost" 
           size="icon"
-          className="relative hover:bg-gold/10 transition-colors"
+          className="relative hover:bg-blue-100 transition-all duration-300 group"
         >
-          <Lightbulb className="w-5 h-5 text-gold hover:text-gold/80 animate-pulse" />
-          <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse" />
+          <div className="relative">
+            <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center shadow-lg animate-pulse hover:scale-110 transition-all duration-300">
+              <Lightbulb className="w-5 h-5 text-yellow-300 animate-bounce" />
+            </div>
+            <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full animate-ping" />
+            <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full" />
+          </div>
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-80 p-0" align="end">
-        <div className="p-4 border-b">
-          <h3 className="font-semibold text-navy">Latest Updates</h3>
-          <p className="text-sm text-gray-600">Stay updated with BMRS news</p>
+        <div className="p-4 border-b bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+          <h3 className="font-semibold">Latest Updates</h3>
+          <p className="text-sm text-blue-100">Stay updated with BMRS news</p>
         </div>
         <div className="max-h-80 overflow-y-auto">
           {notifications.map((notification, index) => (

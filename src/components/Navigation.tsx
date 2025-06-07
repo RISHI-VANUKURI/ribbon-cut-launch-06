@@ -57,6 +57,8 @@ const Navigation = () => {
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 animate-fadeIn hover-lift ${
                     isActive(item.path)
                       ? 'text-gold bg-navy/5'
+                      : item.name === 'Contact'
+                      ? 'bg-gold hover:bg-gold/90 text-white px-4 py-2 rounded hover-lift'
                       : 'text-gray-700 hover:text-navy hover:bg-gray-50'
                   }`}
                   style={{ animationDelay: `${(index + 1) * 100}ms` }}
@@ -64,9 +66,6 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button className="bg-gold hover:bg-gold/90 text-white ml-4 hover-lift animate-scaleIn delay-600">
-                Admissions
-              </Button>
               <NotificationDropdown />
             </div>
           </div>
@@ -122,6 +121,8 @@ const Navigation = () => {
                 className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 animate-fadeIn hover-lift ${
                   isActive(item.path)
                     ? 'text-gold bg-navy/5'
+                    : item.name === 'Contact'
+                    ? 'bg-gold hover:bg-gold/90 text-white text-center'
                     : 'text-gray-700 hover:text-navy hover:bg-gray-50'
                 }`}
                 style={{ animationDelay: `${index * 100}ms` }}
@@ -130,11 +131,6 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <div className="px-3 py-2">
-              <Button className="bg-gold hover:bg-gold/90 text-white w-full hover-lift animate-scaleIn delay-400">
-                Admissions
-              </Button>
-            </div>
           </div>
         </div>
       )}
