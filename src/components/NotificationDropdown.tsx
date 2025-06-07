@@ -48,8 +48,8 @@ const NotificationDropdown = () => {
           className="relative hover:bg-blue-100 transition-all duration-300 group"
         >
           <div className="relative">
-            <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center shadow-lg animate-pulse hover:scale-110 transition-all duration-300">
-              <Lightbulb className="w-5 h-5 text-yellow-300 animate-bounce" />
+            <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300">
+              <Lightbulb className="w-6 h-6 text-yellow-300" />
             </div>
             <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full animate-ping" />
             <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full" />
