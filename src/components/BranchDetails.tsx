@@ -6,14 +6,14 @@ const BranchDetails = () => {
   const branches = [
     {
       name: "BMRS Ganesh Nagar Campus",
-      address: "Ganesh Nagar, Chengicherla Main Road, Hyderabad, Telangana, India",
+      address: "# 3-101/1, Chengicherla Main Road, Chengicherla, Hyderabad, Telangana 500038",
       email: "bmrsghs2024@gmail.com",
       phone: "+91 9959733822",
       image: "/lovable-uploads/1bd97367-f28f-41ab-aca0-b515339a825b.png"
     },
     {
       name: "BMRS Kranthi Colony Campus",
-      address: "Kranthi Colony, Chengicherla, Hyderabad, Telangana, India",
+      address: "Kranthi Colony, Rd No. 2, Bolligudem, Telephone Colony, Chengicherla, Secunderabad, Telangana 500092",
       email: "bmrsghs2024@gmail.com",
       phone: "+91 9502022984",
       image: "/lovable-uploads/f9669ace-38f6-4b23-82f3-5da9319355fc.png"
