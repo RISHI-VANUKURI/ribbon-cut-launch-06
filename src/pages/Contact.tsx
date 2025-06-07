@@ -31,6 +31,21 @@ const Contact = () => {
     });
   };
 
+  const branches = [
+    {
+      name: "🏫 Ganesh Nagar Campus",
+      address: "📍 Ganesh Nagar, Chengicherla Main Road",
+      phone: "📞 9959733822",
+      email: "bmrsghs2024@gmail.com"
+    },
+    {
+      name: "🏫 Kranthi Colony Campus", 
+      address: "📍 Kranthi Colony, Chengicherla",
+      phone: "📞 9502022984",
+      email: "bmrsghs2024@gmail.com"
+    }
+  ];
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -40,6 +55,39 @@ const Contact = () => {
           <p className="text-xl max-w-3xl mx-auto">
             Get in touch with us to learn more about BMRS or schedule a campus visit
           </p>
+        </div>
+      </section>
+
+      {/* Branch Information Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 animate-fadeInUp">
+            <h2 className="text-3xl font-bold text-navy mb-4">Our Campus Locations</h2>
+            <p className="text-lg text-gray-600">Visit either of our campuses for admissions and inquiries</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {branches.map((branch, index) => (
+              <Card key={index} className="p-6 hover-lift animate-cardFloat" style={{animationDelay: `${index * 200}ms`}}>
+                <CardContent className="text-center">
+                  <h3 className="text-xl font-bold text-navy mb-4 animate-fadeInUp">
+                    {branch.name}
+                  </h3>
+                  <div className="space-y-3">
+                    <p className="text-gray-600 animate-slideInLeft">
+                      {branch.address}
+                    </p>
+                    <p className="text-gray-600 animate-slideInLeft delay-100">
+                      {branch.phone}
+                    </p>
+                    <p className="text-gray-600 animate-slideInLeft delay-200">
+                      ✉️ {branch.email}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -58,10 +106,10 @@ const Contact = () => {
                       <span className="text-white text-xl">📍</span>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-navy mb-2">Address</h3>
+                      <h3 className="font-semibold text-navy mb-2">Main Campus Address</h3>
                       <p className="text-gray-600">
-                        H NO 3-101/1, GANESH NAGAR COLONY,<br />
-                        MAIN ROAD, CHENGICHERLA<br />
+                        Ganesh Nagar, Chengicherla Main Road<br />
+                        Hyderabad, Telangana<br />
                         India
                       </p>
                     </div>
@@ -74,11 +122,11 @@ const Contact = () => {
                       <span className="text-white text-xl">📞</span>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-navy mb-2">Phone</h3>
+                      <h3 className="font-semibold text-navy mb-2">Phone Numbers</h3>
                       <p className="text-gray-600">
-                        Main Office<br />
-                        +91 9959733822<br />
-                        9:30 a.m. – 4:00 p.m.
+                        Ganesh Nagar Campus: +91 9959733822<br />
+                        Kranthi Colony Campus: +91 9502022984<br />
+                        Timing: 9:30 a.m. – 4:00 p.m.
                       </p>
                     </div>
                   </CardContent>

@@ -6,8 +6,6 @@ import ImageCarousel from '@/components/ImageCarousel';
 import BranchDetails from '@/components/BranchDetails';
 import Testimonials from '@/components/Testimonials';
 import MissionVision from '@/components/MissionVision';
-import Highlights from '@/components/Highlights';
-import SportsSection from '@/components/SportsSection';
 import AdmissionPopup from '@/components/AdmissionPopup';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -127,15 +125,37 @@ const Index = () => {
         <BranchDetails />
       </div>
 
-      {/* Highlights & Achievements Section */}
-      <div className="animate-fadeIn delay-400">
-        <Highlights />
-      </div>
+      {/* Sports Preview Section - redirects to Activities page */}
+      <section className="py-12 sm:py-16 bg-white animate-fadeIn delay-400">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12 animate-fadeInUp">
+            <div className="text-4xl mb-4 animate-bounceIn">🏆</div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-navy mb-4 animate-fadeInUp delay-200">
+              Sports & Activities
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed animate-fadeIn delay-300">
+              Building champions through sports, arts, and extracurricular activities
+            </p>
+          </div>
 
-      {/* Sports Section */}
-      <div className="animate-fadeIn delay-500">
-        <SportsSection />
-      </div>
+          <div className="bg-navy rounded-2xl p-8 text-white text-center animate-slideInUp">
+            <h3 className="text-2xl font-bold mb-4 animate-fadeInUp">
+              Excellence in Sports & Activities
+            </h3>
+            <p className="text-lg opacity-90 mb-6 animate-fadeIn delay-200">
+              From Kabaddi championships to cultural events, discover our complete range of activities
+            </p>
+            <Link to="/activities">
+              <Button 
+                size="lg" 
+                className="bg-gold hover:bg-gold/90 text-white px-8 hover-lift animate-bounceIn delay-300"
+              >
+                Explore All Activities
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Testimonials Section */}
       <div className="animate-fadeIn delay-600">

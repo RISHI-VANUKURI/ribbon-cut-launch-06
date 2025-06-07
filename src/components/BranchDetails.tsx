@@ -5,26 +5,18 @@ import { MapPin, Mail, Phone, Building2 } from 'lucide-react';
 const BranchDetails = () => {
   const branches = [
     {
-      name: "BMRS Main Campus",
-      address: "H NO 3-101/1, GANESH NAGAR COLONY, MAIN ROAD, CHENGICHERLA, Hyderabad, Telangana, India",
+      name: "BMRS Ganesh Nagar Campus",
+      address: "Ganesh Nagar, Chengicherla Main Road, Hyderabad, Telangana, India",
       email: "bmrsghs2024@gmail.com",
       phone: "+91 9959733822",
-      images: [
-        "/lovable-uploads/501e9147-d192-4ecb-98d8-21cc820c40d0.png",
-        "/lovable-uploads/c01ece17-b55f-4278-aa0c-5d2710d15453.png",
-        "/lovable-uploads/7871e098-d1b8-4c35-a1d9-0ca06df3f4fe.png"
-      ]
+      image: "/lovable-uploads/1bd97367-f28f-41ab-aca0-b515339a825b.png"
     },
     {
-      name: "BMRS Secondary Branch",
-      address: "Coming Soon - New Branch Location, Hyderabad, Telangana, India",
-      email: "branch2@bmrsgroupofschools.com",
-      phone: "+91 9959733823",
-      images: [
-        "https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1523050854058-8df90110c9d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-      ]
+      name: "BMRS Kranthi Colony Campus",
+      address: "Kranthi Colony, Chengicherla, Hyderabad, Telangana, India",
+      email: "bmrsghs2024@gmail.com",
+      phone: "+91 9502022984",
+      image: "/lovable-uploads/f9669ace-38f6-4b23-82f3-5da9319355fc.png"
     }
   ];
 
@@ -44,15 +36,12 @@ const BranchDetails = () => {
         <div className="grid md:grid-cols-2 gap-8 sm:gap-12">
           {branches.map((branch, index) => (
             <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 animate-cardFloat hover-lift" style={{animationDelay: `${index * 200}ms`}}>
-              <div className="grid grid-cols-3 gap-2 p-4">
-                {branch.images.map((image, imgIndex) => (
-                  <img
-                    key={imgIndex}
-                    src={image}
-                    alt={`${branch.name} - Image ${imgIndex + 1}`}
-                    className="w-full h-24 object-cover rounded-lg hover-scale"
-                  />
-                ))}
+              <div className="p-4">
+                <img
+                  src={branch.image}
+                  alt={`${branch.name} Building`}
+                  className="w-full h-48 object-cover rounded-lg hover-scale"
+                />
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-navy mb-4 animate-fadeInUp">
