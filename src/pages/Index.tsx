@@ -40,7 +40,7 @@ const Index = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1523050854058-8df90110c9d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
+            backgroundImage: `url('/lovable-uploads/ee319959-1030-42ac-b1cd-cce2b117c623.png')`,
           }}
         />
         <div className="absolute inset-0 bg-navy/60" />
@@ -101,7 +101,7 @@ const Index = () => {
             </div>
             <div className="animate-slideInRight">
               <img
-                src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2032&q=80"
+                src="/lovable-uploads/14d28323-06ae-4fe0-a40c-062565df1341.png"
                 alt="Students in classroom"
                 className="rounded-lg shadow-xl w-full h-auto hover-scale animate-scaleIn delay-500"
               />
