@@ -11,6 +11,30 @@ import Autoplay from "embla-carousel-autoplay";
 const ImageCarousel = () => {
   const images = [
     {
+      src: "/lovable-uploads/db69c9f5-1a37-4de9-84ba-83eec330e7d7.png",
+      alt: "BMRS students visit to National Remote Sensing Centre"
+    },
+    {
+      src: "/lovable-uploads/6c1bcfd3-0725-4784-932e-41ab4b43eb30.png",
+      alt: "BMRS SSC Toppers 2024-2025 achievements"
+    },
+    {
+      src: "/lovable-uploads/3d2c8101-41e7-4789-a7cd-9dfb63d82806.png",
+      alt: "Sports activities - Kabaddi competition"
+    },
+    {
+      src: "/lovable-uploads/cdc0fa74-9d58-43cd-9ee4-e6357aafb05a.png",
+      alt: "School assembly and morning activities"
+    },
+    {
+      src: "/lovable-uploads/323bb2f7-a65b-44d9-9d78-20da9531097d.png",
+      alt: "Cultural event - Traditional dance performances"
+    },
+    {
+      src: "/lovable-uploads/5155050f-e127-4a71-bf95-d9eb1caf73cd.png",
+      alt: "Cultural program - Classical dance performance"
+    },
+    {
       src: "/lovable-uploads/501e9147-d192-4ecb-98d8-21cc820c40d0.png",
       alt: "Students in science exhibition"
     },
@@ -25,10 +49,6 @@ const ImageCarousel = () => {
     {
       src: "/lovable-uploads/40f4f173-ccff-4dce-a285-2900c4482c3a.png",
       alt: "Sports competition"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1523050854058-8df90110c9d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      alt: "School campus"
     }
   ];
 
