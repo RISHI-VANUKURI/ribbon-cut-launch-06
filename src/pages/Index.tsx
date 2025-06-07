@@ -3,17 +3,41 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Statistics from '@/components/Statistics';
 import ImageCarousel from '@/components/ImageCarousel';
+import BranchDetails from '@/components/BranchDetails';
+import Testimonials from '@/components/Testimonials';
+import MissionVision from '@/components/MissionVision';
+import Highlights from '@/components/Highlights';
+import SportsSection from '@/components/SportsSection';
+import AdmissionPopup from '@/components/AdmissionPopup';
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 const Index = () => {
+  const [showAdmissionPopup, setShowAdmissionPopup] = useState(false);
+
+  useEffect(() => {
+    // Show admission popup after 3 seconds
+    const timer = setTimeout(() => {
+      setShowAdmissionPopup(true);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="min-h-screen">
-      {/* Image Carousel Section - Now at the top */}
+      {/* Admission Popup */}
+      <AdmissionPopup 
+        isOpen={showAdmissionPopup} 
+        onClose={() => setShowAdmissionPopup(false)} 
+      />
+
+      {/* Image Carousel Section */}
       <div className="animate-fadeIn">
         <ImageCarousel />
       </div>
 
-      {/* Hero Section - Now below carousel */}
+      {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-r from-navy/90 to-blue-800/90 animate-slideInUp">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -29,6 +53,9 @@ const Index = () => {
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 animate-fadeInUp delay-200 opacity-90 leading-relaxed">
             Empowering Young Minds at BMRS Group of Schools
+          </p>
+          <p className="text-base sm:text-lg mb-6 sm:mb-8 animate-fadeInUp delay-300 opacity-80">
+            Visit us at: <span className="text-gold font-semibold">bmrsgroupofschools.com</span>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp delay-400">
             <Link to="/about">
@@ -85,9 +112,34 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Mission & Vision Section */}
+      <div className="animate-fadeIn delay-100">
+        <MissionVision />
+      </div>
+
       {/* Statistics Section */}
       <div className="animate-fadeIn delay-200">
         <Statistics />
+      </div>
+
+      {/* Branch Details Section */}
+      <div className="animate-fadeIn delay-300">
+        <BranchDetails />
+      </div>
+
+      {/* Highlights & Achievements Section */}
+      <div className="animate-fadeIn delay-400">
+        <Highlights />
+      </div>
+
+      {/* Sports Section */}
+      <div className="animate-fadeIn delay-500">
+        <SportsSection />
+      </div>
+
+      {/* Testimonials Section */}
+      <div className="animate-fadeIn delay-600">
+        <Testimonials />
       </div>
 
       {/* Quote Section */}
