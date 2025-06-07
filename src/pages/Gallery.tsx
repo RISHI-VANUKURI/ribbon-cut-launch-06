@@ -12,10 +12,12 @@ const Gallery = () => {
     { id: 'events', name: 'School Events' },
     { id: 'sports', name: 'Sports Activities' },
     { id: 'campus', name: 'Campus Life' },
-    { id: 'cultural', name: 'Cultural Programs' }
+    { id: 'cultural', name: 'Cultural Programs' },
+    { id: 'academics', name: 'Academic Activities' }
   ];
 
   const galleryItems = [
+    // Carousel images
     {
       id: 1,
       src: "/lovable-uploads/501e9147-d192-4ecb-98d8-21cc820c40d0.png",
@@ -46,31 +48,53 @@ const Gallery = () => {
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-1523050854058-8df90110c9d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "School campus",
-      category: "campus",
-      title: "Beautiful Campus View"
+      src: "/lovable-uploads/6c1bcfd3-0725-4784-932e-41ab4b43eb30.png",
+      alt: "BMRS SSC Toppers 2024-2025 achievements",
+      category: "events",
+      title: "SSC Toppers 2024-2025"
     },
     {
       id: 6,
-      src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Students in classroom",
-      category: "campus",
-      title: "Interactive Learning Session"
+      src: "/lovable-uploads/db69c9f5-1a37-4de9-84ba-83eec330e7d7.png",
+      alt: "BMRS students visit to National Remote Sensing Centre",
+      category: "events",
+      title: "National Remote Sensing Centre Visit"
     },
+    // New academic images
     {
       id: 7,
-      src: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Students studying",
+      src: "/lovable-uploads/ee319959-1030-42ac-b1cd-cce2b117c623.png",
+      alt: "Morning assembly with students",
       category: "campus",
-      title: "Library Study Hours"
+      title: "Morning Assembly"
     },
     {
       id: 8,
-      src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "School playground",
-      category: "sports",
-      title: "Morning Assembly"
+      src: "/lovable-uploads/14d28323-06ae-4fe0-a40c-062565df1341.png",
+      alt: "Students with science project models",
+      category: "academics",
+      title: "Science Project Exhibition"
+    },
+    {
+      id: 9,
+      src: "/lovable-uploads/3bb55dd9-f581-4174-bd26-2a3ad1d11820.png",
+      alt: "Science exhibition with students presenting projects",
+      category: "academics",
+      title: "Student Science Fair"
+    },
+    {
+      id: 10,
+      src: "/lovable-uploads/c24924a9-a2ec-427b-9348-960ec90a58c2.png",
+      alt: "Students in science laboratory",
+      category: "academics",
+      title: "Science Laboratory Session"
+    },
+    {
+      id: 11,
+      src: "/lovable-uploads/0eedf1c8-4a4a-4c1c-97c3-baba673ba9d7.png",
+      alt: "Students with thermometer types project",
+      category: "academics",
+      title: "Physics Project - Thermometers"
     }
   ];
 
