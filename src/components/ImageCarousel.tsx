@@ -33,6 +33,22 @@ const ImageCarousel = () => {
     {
       src: "/lovable-uploads/5155050f-e127-4a71-bf95-d9eb1caf73cd.png",
       alt: "Cultural program - Classical dance performance"
+    },
+    {
+      src: "/lovable-uploads/501e9147-d192-4ecb-98d8-21cc820c40d0.png",
+      alt: "Students in science exhibition"
+    },
+    {
+      src: "/lovable-uploads/c01ece17-b55f-4278-aa0c-5d2710d15453.png",
+      alt: "Sports activities - Kabaddi"
+    },
+    {
+      src: "/lovable-uploads/7871e098-d1b8-4c35-a1d9-0ca06df3f4fe.png",
+      alt: "Cultural dance performance"
+    },
+    {
+      src: "/lovable-uploads/40f4f173-ccff-4dce-a285-2900c4482c3a.png",
+      alt: "Sports competition"
     }
   ];
 
@@ -64,10 +80,10 @@ const ImageCarousel = () => {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center text-white max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                       <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">
-                        BMRS Group Of Schools
+                        Life at BMRS
                       </h2>
                       <p className="text-base sm:text-lg md:text-xl lg:text-2xl opacity-90 leading-relaxed">
-                        A Partnership For Your Child's Success
+                        Discover the vibrant campus life, activities, and memorable moments at BMRS Group of Schools
                       </p>
                     </div>
                   </div>

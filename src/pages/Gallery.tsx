@@ -17,7 +17,7 @@ const Gallery = () => {
   ];
 
   const galleryItems = [
-    // Original carousel images
+    // Carousel images
     {
       id: 1,
       src: "/lovable-uploads/501e9147-d192-4ecb-98d8-21cc820c40d0.png",
@@ -60,7 +60,7 @@ const Gallery = () => {
       category: "events",
       title: "National Remote Sensing Centre Visit"
     },
-    // Academic images from previous upload
+    // New academic images
     {
       id: 7,
       src: "/lovable-uploads/ee319959-1030-42ac-b1cd-cce2b117c623.png",
@@ -95,49 +95,6 @@ const Gallery = () => {
       alt: "Students with thermometer types project",
       category: "academics",
       title: "Physics Project - Thermometers"
-    },
-    // New images from latest upload
-    {
-      id: 12,
-      src: "/lovable-uploads/4f4453cb-1901-4de0-87e7-02710b011dcf.png",
-      alt: "Students presenting geography project",
-      category: "academics",
-      title: "Geography Project Exhibition"
-    },
-    {
-      id: 13,
-      src: "/lovable-uploads/a8972c94-09db-4494-8cfb-3fcd16815265.png",
-      alt: "BMRS cultural event performance",
-      category: "cultural",
-      title: "Cultural Program Performance"
-    },
-    {
-      id: 14,
-      src: "/lovable-uploads/c43c0f25-2c57-4fc7-b683-abdb62748290.png",
-      alt: "Students with science models",
-      category: "academics",
-      title: "Science Model Exhibition"
-    },
-    {
-      id: 15,
-      src: "/lovable-uploads/5ff820fc-7b43-4274-8143-6fa8cc98f077.png",
-      alt: "Students presenting electric game project",
-      category: "academics",
-      title: "Electric Game Project"
-    },
-    {
-      id: 16,
-      src: "/lovable-uploads/b8cf206b-8459-4fca-a243-e6bdcddb7c9b.png",
-      alt: "Students in science classroom",
-      category: "academics",
-      title: "Science Learning Session"
-    },
-    {
-      id: 17,
-      src: "/lovable-uploads/d63af621-5c43-4466-b870-81a9aadec2b7.png",
-      alt: "Students presenting thermometer types project",
-      category: "academics",
-      title: "Types of Thermometers Project"
     }
   ];
 
