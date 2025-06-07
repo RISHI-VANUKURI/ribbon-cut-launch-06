@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import FloatingGalleryButton from "./components/FloatingGalleryButton";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Academics from "./pages/Academics";
@@ -47,6 +48,7 @@ const App = () => (
             </Routes>
           </main>
           <Footer />
+          <FloatingGalleryButton />
         </div>
       </BrowserRouter>
     </TooltipProvider>
