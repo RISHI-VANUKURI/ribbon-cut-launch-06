@@ -1,6 +1,8 @@
+
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import NotificationDropdown from './NotificationDropdown';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,11 +67,13 @@ const Navigation = () => {
               <Button className="bg-gold hover:bg-gold/90 text-white ml-4 hover-lift animate-scaleIn delay-600">
                 Admissions
               </Button>
+              <NotificationDropdown />
             </div>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden animate-fadeIn delay-300">
+          {/* Mobile menu button and notification */}
+          <div className="md:hidden flex items-center space-x-2 animate-fadeIn delay-300">
+            <NotificationDropdown />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-navy hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-navy transition-all duration-200 hover-scale"
