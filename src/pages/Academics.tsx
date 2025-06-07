@@ -204,8 +204,8 @@ const Academics = () => {
             </div>
             <div className="animate-slideInRight">
               <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                alt="Teaching methodology"
+                src="/lovable-uploads/5648c964-4999-4b1e-b73b-bd508cb46f4c.png"
+                alt="BMRS SSC Toppers achievements"
                 className="rounded-lg shadow-xl hover-scale"
               />
             </div>

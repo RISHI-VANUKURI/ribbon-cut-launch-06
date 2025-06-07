@@ -112,8 +112,8 @@ const About = () => {
           <div className="grid lg:grid-cols-3 gap-12 items-center">
             <div className="lg:col-span-1 animate-slideInLeft">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80"
-                alt="Principal"
+                src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80"
+                alt="Principal Character"
                 className="rounded-lg shadow-lg w-full hover-scale"
               />
             </div>

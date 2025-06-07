@@ -94,8 +94,8 @@ const Activities = () => {
             </div>
             <div>
               <img
-                src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                alt="Students in art class"
+                src="/lovable-uploads/0899d163-9818-4857-8aaf-a0e87bf00bdb.png"
+                alt="Student performing classical dance"
                 className="rounded-lg shadow-xl"
               />
             </div>
