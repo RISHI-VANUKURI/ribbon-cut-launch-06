@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Youtube, MessageCircle } from 'lucide-react';
 
@@ -45,15 +44,6 @@ const Footer = () => {
               >
                 <Youtube className="w-6 h-6" />
               </a>
-              <a 
-                href="https://wa.me/919959733822" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-gold transition-colors hover-lift" 
-                aria-label="WhatsApp"
-              >
-                <MessageCircle className="w-6 h-6" />
-              </a>
             </div>
           </div>
 
@@ -72,12 +62,22 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-            <div className="space-y-2 text-gray-300">
-              <p>📍 H NO 3-101/1, GANESH NAGAR COLONY, MAIN ROAD, CHENGICHERLA, India</p>
-              <p>📞 <a href="tel:+919959733822" className="hover:text-gold transition-colors">+91 9959733822</a></p>
-              <p>✉️ <a href="mailto:bmrsghs2024@gmail.com" className="hover:text-gold transition-colors">bmrsghs2024@gmail.com</a></p>
-              <p>💬 <a href="https://wa.me/919959733822" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">WhatsApp: +91 9959733822</a></p>
-              <p>🕒 Mon - Fri: 9:30 a.m. – 4:00 p.m.</p>
+            <div className="space-y-4 text-gray-300 text-sm">
+              <div>
+                <p className="font-bold text-white">📍 Ganesh Nagar Campus</p>
+                <p>H NO 3-101/1, Ganesh Nagar Colony, Main Road, Chengicherla, India</p>
+                <p>📞 <a href="tel:+919959733822" className="hover:text-gold transition-colors">+91 9959733822</a></p>
+                <p>💬 <a href="https://wa.me/919959733822" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">WhatsApp: +91 9959733822</a></p>
+                <p>🕒 Mon – Sat: 9:00 a.m. – 5:00 p.m.</p>
+              </div>
+
+              <div className="mt-4">
+                <p className="font-bold text-white">📍 Kranthi Colony Campus</p>
+                <p>Kranthi Colony, Medipally Mandal, Hyderabad, India</p>
+                <p>📞 <a href="tel:+919502022984" className="hover:text-gold transition-colors">+91 9502022984</a></p>
+                <p>💬 <a href="https://wa.me/919502022984" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">WhatsApp: +91 9502022984</a></p>
+                <p>🕒 Mon – Sat: 9:00 a.m. – 5:00 p.m.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -87,7 +87,7 @@ const Footer = () => {
           <p className="mt-2">
             Built by{' '}
             <span className="text-gold font-semibold">ReView AI Tech and Solutions</span>
-            {' '}- {' '}
+            {' '}–{' '}
             <a 
               href="https://reviewrv25.com" 
               target="_blank" 

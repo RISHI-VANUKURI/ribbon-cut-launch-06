@@ -26,10 +26,10 @@ const MissionVision = () => {
                   Our Mission
                 </h3>
                 <p className="text-gray-600 leading-relaxed animate-fadeIn delay-400">
-                  To provide quality education that nurtures young minds, builds character, 
-                  and prepares students to become responsible global citizens. We strive to 
-                  create an environment where every child can discover their potential and 
-                  achieve excellence in academics, sports, and personal development.
+                  In today’s world, technology and communication are powerful tools in education. 
+                  By introducing digital tablets, advanced computer labs, and audio-visual conference halls, we enable personalized learning and innovative teaching.
+                  These resources strengthen the bond between teachers, students, parents, and management, while also encouraging creativity, teamwork, and project-based learning.
+
                 </p>
               </div>
 
@@ -41,10 +41,8 @@ const MissionVision = () => {
                   Our Vision
                 </h3>
                 <p className="text-gray-600 leading-relaxed animate-fadeIn delay-600">
-                  To be recognized as a premier educational institution that inspires 
-                  lifelong learning, innovation, and leadership. We envision graduates 
-                  who are confident, compassionate, and equipped with the knowledge and 
-                  skills needed to make a positive impact in their communities and beyond.
+                At our institution, we believe education is not limited to textbooks — it is a journey that nurtures young minds with knowledge, values, and skills for life. Our vision is to create an environment where every student is empowered to discover their potential, express their creativity, and grow into a responsible global citizen.
+
                 </p>
               </div>
             </div>

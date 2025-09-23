@@ -1,10 +1,202 @@
+import React, { useState, useEffect } from "react";
+import { Card, CardContent } from "@/components/ui/card";
 
-import { Card, CardContent } from '@/components/ui/card';
+// Club Data
+const clubData = [
+  {
+    name: "Science Club",
+    icon: "🔬",
+    summary: "Explore, experiment, discover!",
+    details:
+      "Students dive into hands-on experiments, science fairs, and projects that ignite scientific curiosity beyond textbooks.",
+  },
+  {
+    name: "Debate Society",
+    icon: "🗣️",
+    summary: "Speak. Think. Win.",
+    details:
+      "Sharpen public speaking, critical reasoning, and argumentation through structured debates and mock parliaments.",
+  },
+  {
+    name: "Environmental Club",
+    icon: "🌱",
+    summary: "Go green, live clean.",
+    details:
+      "Students lead sustainability projects and green drives, instilling environmental responsibility and awareness.",
+  },
+  {
+    name: "Mathematics Club",
+    icon: "📊",
+    summary: "Crack logic, bend numbers.",
+    details:
+      "Engage in Olympiads, brain teasers, and math hunts that nurture logic and creative problem-solving.",
+  },
+  {
+    name: "Literature Society",
+    icon: "📖",
+    summary: "Words that inspire.",
+    details:
+      "From poetry slams to book reviews, this society brings the magic of words alive through creativity and discussion.",
+  },
+  {
+    name: "Technology Club",
+    icon: "💻",
+    summary: "Code. Build. Innovate.",
+    details:
+      "Hands-on with coding, robotics, and design challenges — building real-world tech skills through innovation.",
+  },
+];
+
+// Sports Carousel
+const sports = [
+  { name: "Football", icon: "⚽", description: "Team strategy and physical fitness. Promotes coordination, endurance, and tactical thinking." },
+  { name: "Basketball", icon: "🏀", description: "Enhances agility and quick decision-making. Encourages communication and teamwork." },
+  { name: "Cricket", icon: "🏏", description: "Precision and mental focus. Teaches patience and fosters team collaboration." },
+  { name: "Athletics", icon: "🏃", description: "Track and field events. Develops stamina and focus. Celebrates individual achievement." },
+  { name: "Swimming", icon: "🏊", description: "Boosts full-body strength and lung capacity. Ensures survival skills and fun." },
+  { name: "Badminton", icon: "🏸", description: "Agility and quick reflexes. Builds reaction time. Great indoor sport for all." },
+  { name: "Table Tennis", icon: "🏓", description: "Requires sharp reflexes. Ideal for indoor fun. Nurtures focus and rhythm." },
+  { name: "Volleyball", icon: "🏐", description: "Team strategy and timing. Fun beach and court sport. Promotes team spirit." },
+  { name: "Kabaddi", icon: "🤼", description: "Agility, strength, and strategy. Great for reflex training. Encourages quick thinking." },
+  { name: "Kho-Kho", icon: "🏃‍♂️", description: "Speed and teamwork. Builds stamina and teaches evasion and planning." },
+  { name: "Chess", icon: "♟️", description: "Strategy, patience, and foresight. Teaches planning and critical thinking." },
+];
+
+// Achievement Data (with real images from Unsplash CDN)
+const achievementsData = [
+  {
+    title: "Regional Science Fair",
+    award: "1st Place",
+    year: "2024",
+    img: "https://source.unsplash.com/800x400/?science,fair",
+    description: "Our students showcased an innovative renewable energy project that won first place.",
+  },
+  {
+    title: "State Debate Championship",
+    award: "Winners",
+    year: "2023",
+    img: "https://source.unsplash.com/800x400/?debate,public-speaking",
+    description: "Students argued compellingly and won the state title in an intense final round.",
+  },
+  {
+    title: "Inter-School Sports Meet",
+    award: "Overall Champions",
+    year: "2024",
+    img: "https://source.unsplash.com/800x400/?school,sports",
+    description: "With dedication and teamwork, we outperformed 20+ schools to claim the trophy.",
+  },
+  {
+    title: "National Art Competition",
+    award: "Gold Medal",
+    year: "2023",
+    img: "https://source.unsplash.com/800x400/?art,painting",
+    description: "Creativity met excellence as our student's artwork stood out nationally.",
+  },
+];
+
+const SportsCarousel = () => {
+  const [centerIndex, setCenterIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  useEffect(() => {
+    if (paused) return;
+    const interval = setInterval(() => {
+      setCenterIndex((prev) => (prev + 1) % sports.length);
+    }, 4000); // slower cycle
+    return () => clearInterval(interval);
+  }, [paused]);
+
+  const getDisplayIndexes = (index: number) => {
+    const left = (index - 1 + sports.length) % sports.length;
+    const right = (index + 1) % sports.length;
+    return { left, center: index, right };
+  };
+
+  const { left, center, right } = getDisplayIndexes(centerIndex);
+  const visible = [left, center, right];
+
+  return (
+    <div
+      className="relative flex justify-center items-center h-[30rem] overflow-hidden"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
+      <div className="relative flex w-full justify-center items-center">
+        {visible.map((index, position) => {
+          const sport = sports[index];
+          const isCenter = position === 1;
+          const isLeft = position === 0;
+          const isRight = position === 2;
+
+          return (
+            <div
+              key={index}
+              className="absolute transition-all duration-[2500ms] ease-in-out"
+              style={{
+                transform: isCenter
+                  ? "translateX(0) scale(1)"
+                  : isLeft
+                  ? "translateX(-320px) scale(0.85)"
+                  : "translateX(320px) scale(0.85)",
+                opacity: isCenter ? 1 : 0.5,
+                zIndex: isCenter ? 10 : 5,
+              }}
+            >
+              <Card className="text-center w-80 p-8 shadow-xl hover:scale-105 transition-transform duration-500">
+                <CardContent>
+                  <div className="text-5xl mb-4">{sport.icon}</div>
+                  <h3 className="font-bold text-navy text-lg mb-3">{sport.name}</h3>
+                  <p className="text-sm text-gray-600 whitespace-pre-line leading-relaxed">
+                    {sport.description}
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+
+const AchievementList = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggle = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  return (
+    <div className="max-w-4xl mx-auto space-y-4">
+      {achievementsData.map((item, index) => (
+        <div key={index} className="border rounded-lg shadow-sm bg-white">
+          <button
+            onClick={() => toggle(index)}
+            className="w-full text-left px-6 py-4 hover:bg-gray-50 transition flex justify-between items-center"
+          >
+            <div>
+              <h3 className="text-xl font-semibold text-navy">{item.title}</h3>
+              <p className="text-gold font-medium">{item.award} • {item.year}</p>
+            </div>
+            <span className="text-xl">{openIndex === index ? "−" : "+"}</span>
+          </button>
+
+          {openIndex === index && (
+            <div className="px-6 pb-6 animate-fadeIn">
+              <img src={item.img} alt={item.title} className="w-full rounded-md mb-4" />
+              <p className="text-gray-700">{item.description}</p>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+};
 
 const Activities = () => {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-navy to-blue-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Activities & Programs</h1>
@@ -14,206 +206,78 @@ const Activities = () => {
         </div>
       </section>
 
-      {/* Introduction */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-navy mb-6">
-            Co-Curricular Excellence
-          </h2>
+          <h2 className="text-3xl font-bold text-navy mb-6">Co-Curricular Excellence</h2>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-            At BMRS, we believe that true education extends far beyond the classroom. 
-            Our comprehensive co-curricular program is designed to help students 
-            discover their passions, develop new skills, and build lasting friendships 
-            while fostering creativity, leadership, and teamwork.
+            At BMRS, we believe that true education extends far beyond the classroom. Our co-curricular
+            program helps students discover their passions and build lasting friendships.
           </p>
         </div>
       </section>
 
-      {/* Sports Activities */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
-              Sports & Athletics
-            </h2>
-            <p className="text-lg text-gray-600">
-              Building physical fitness, teamwork, and competitive spirit
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { name: "Football", icon: "⚽", description: "Team strategy and physical fitness" },
-              { name: "Basketball", icon: "🏀", description: "Coordination and team dynamics" },
-              { name: "Cricket", icon: "🏏", description: "Precision and mental focus" },
-              { name: "Athletics", icon: "🏃", description: "Track and field events" },
-              { name: "Swimming", icon: "🏊", description: "Water sports and endurance" },
-              { name: "Badminton", icon: "🏸", description: "Agility and quick reflexes" },
-              { name: "Table Tennis", icon: "🏓", description: "Hand-eye coordination" },
-              { name: "Volleyball", icon: "🏐", description: "Team coordination and strategy" }
-            ].map((sport, index) => (
-              <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
-                <CardContent>
-                  <div className="text-4xl mb-3">{sport.icon}</div>
-                  <h3 className="font-bold text-navy mb-2">{sport.name}</h3>
-                  <p className="text-sm text-gray-600">{sport.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+      <section className="py-20 bg-gray-50">
+        <div className="text-center mb-12 animate-fadeInUp">
+          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">Sports & Games</h2>
+          <p className="text-gray-600 max-w-xl mx-auto">
+            Promoting physical fitness, team spirit, and mental agility through diverse sports activities.
+          </p>
         </div>
+        <SportsCarousel />
       </section>
 
-      {/* Creative Arts */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-navy mb-6">Creative Arts</h2>
-              <p className="text-lg text-gray-600 mb-8">
-                Our arts program encourages students to express themselves creatively 
-                and develop their artistic talents across various mediums and forms.
-              </p>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                {[
-                  { name: "Visual Arts", icon: "🎨", skills: "Drawing, Painting, Sculpture" },
-                  { name: "Music", icon: "🎵", skills: "Vocal, Instrumental, Composition" },
-                  { name: "Dance", icon: "💃", skills: "Classical, Contemporary, Folk" },
-                  { name: "Drama", icon: "🎭", skills: "Theater, Performance, Expression" }
-                ].map((art, index) => (
-                  <Card key={index} className="p-4 hover:shadow-lg transition-shadow">
-                    <CardContent>
-                      <div className="text-3xl mb-2">{art.icon}</div>
-                      <h3 className="font-bold text-navy mb-1">{art.name}</h3>
-                      <p className="text-sm text-gray-600">{art.skills}</p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-            <div>
-              <img
-                src="/lovable-uploads/0899d163-9818-4857-8aaf-a0e87bf00bdb.png"
-                alt="Student performing classical dance"
-                className="rounded-lg shadow-xl"
-              />
+      <section className="py-16 bg-gray-50 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6">
+            Academic Clubs & Societies
+          </h2>
+          <p className="text-lg text-gray-600 mb-10">
+            Hover to learn more about our clubs — where intellect finds its tribe.
+          </p>
+
+          <div className="relative overflow-hidden marquee-wrapper">
+            <div className="flex marquee-track">
+              {[...clubData, ...clubData].map((club, index) => (
+                <span
+                  key={index}
+                  className="inline-block mx-6 relative group cursor-pointer"
+                >
+                  <span className="text-xl">{club.icon}</span>{" "}
+                  <span className="font-medium text-gray-700">{club.name}</span>
+                  <div className="absolute top-10 left-1/2 transform -translate-x-1/2 z-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white border border-gray-300 shadow-xl p-4 rounded-xl w-72 text-left text-sm text-gray-800 pointer-events-auto">
+                    <h4 className="font-bold text-navy mb-1">
+                      {club.icon} {club.name}
+                    </h4>
+                    <p className="text-gray-600">{club.details}</p>
+                  </div>
+                </span>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Academic Clubs */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
-              Academic Clubs & Societies
-            </h2>
-            <p className="text-lg text-gray-600">
-              Specialized clubs that deepen academic interests and build expertise
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Science Club",
-                icon: "🔬",
-                description: "Experiments, research projects, and science fairs to explore scientific concepts beyond the classroom."
-              },
-              {
-                name: "Debate Society",
-                icon: "🗣️",
-                description: "Developing critical thinking, public speaking, and argumentation skills through structured debates."
-              },
-              {
-                name: "Environmental Club",
-                icon: "🌱",
-                description: "Promoting environmental awareness and sustainability through various green initiatives."
-              },
-              {
-                name: "Mathematics Club",
-                icon: "📊",
-                description: "Problem-solving competitions, mathematical puzzles, and advanced concept exploration."
-              },
-              {
-                name: "Literature Society",
-                icon: "📖",
-                description: "Book clubs, creative writing, poetry, and literary discussions to foster love for literature."
-              },
-              {
-                name: "Technology Club",
-                icon: "💻",
-                description: "Coding, robotics, and digital innovation projects to enhance technological skills."
-              }
-            ].map((club, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-                <CardContent>
-                  <div className="text-4xl mb-4">{club.icon}</div>
-                  <h3 className="text-xl font-bold text-navy mb-3">{club.name}</h3>
-                  <p className="text-gray-600">{club.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Student Achievements */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
-              Student Achievements
-            </h2>
-            <p className="text-lg text-gray-600">
-              Celebrating excellence and success across all activities
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">Student Achievements</h2>
+            <p className="text-lg text-gray-600">Celebrating excellence and success across all activities</p>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { achievement: "Regional Science Fair", award: "1st Place", year: "2024" },
-              { achievement: "State Debate Championship", award: "Winners", year: "2023" },
-              { achievement: "Inter-School Sports Meet", award: "Overall Champions", year: "2024" },
-              { achievement: "National Art Competition", award: "Gold Medal", year: "2023" },
-              { achievement: "Mathematics Olympiad", award: "Top 10", year: "2024" },
-              { achievement: "Cultural Fest", award: "Best Performance", year: "2023" },
-              { achievement: "Environmental Project", award: "Excellence Award", year: "2024" },
-              { achievement: "Music Competition", award: "1st Place", year: "2023" }
-            ].map((item, index) => (
-              <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
-                <CardContent>
-                  <div className="text-3xl mb-3">🏆</div>
-                  <h3 className="font-bold text-navy mb-2">{item.achievement}</h3>
-                  <p className="text-gold font-semibold mb-1">{item.award}</p>
-                  <p className="text-sm text-gray-600">{item.year}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <AchievementList />
         </div>
       </section>
-
-      {/* Testimonials */}
       <section className="py-16 bg-navy text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              What Our Students Say
-            </h2>
-            <p className="text-xl opacity-90">
-              Hear from students about their experiences in our activity programs
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Students Say</h2>
+            <p className="text-xl opacity-90">Hear from students about their experiences in our activity programs</p>
           </div>
-
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="p-8 bg-white text-navy">
               <CardContent>
                 <blockquote className="text-lg italic mb-4">
-                  "The debate society helped me build confidence and improved my public 
-                  speaking skills tremendously. I feel more confident expressing my ideas now."
+                  "The debate society helped me build confidence and improved my public speaking skills tremendously.
+                  I feel more confident expressing my ideas now."
                 </blockquote>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center mr-4">
@@ -226,12 +290,11 @@ const Activities = () => {
                 </div>
               </CardContent>
             </Card>
-
             <Card className="p-8 bg-white text-navy">
               <CardContent>
                 <blockquote className="text-lg italic mb-4">
-                  "Being part of the football team taught me about teamwork and perseverance. 
-                  The coaching staff is amazing and always encourages us to do our best."
+                  "Being part of the football team taught me about teamwork and perseverance. The coaching staff is
+                  amazing and always encourages us to do our best."
                 </blockquote>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center mr-4">
@@ -248,7 +311,6 @@ const Activities = () => {
         </div>
       </section>
 
-      {/* Quote Section */}
       <section className="py-16 bg-gold text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <blockquote className="text-2xl md:text-3xl font-light italic mb-6">

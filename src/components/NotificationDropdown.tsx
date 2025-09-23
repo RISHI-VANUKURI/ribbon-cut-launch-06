@@ -20,22 +20,10 @@ const NotificationDropdown = () => {
       isExternal: false
     },
     {
-      title: "Results have been posted",
-      description: "Click here to check your results",
-      link: "/academics",
-      isExternal: false
-    },
-    {
       title: "Check out our new photos",
       description: "Latest events and activities",
       link: "/gallery",
       isExternal: false
-    },
-    {
-      title: "Visit our official website",
-      description: "bmrsgroupofschools.com",
-      link: "https://bmrsgroupofschools.com",
-      isExternal: true
     }
   ];
 

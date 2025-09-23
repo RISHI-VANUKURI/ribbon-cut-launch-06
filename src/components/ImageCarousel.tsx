@@ -1,4 +1,3 @@
-
 import {
   Carousel,
   CarouselContent,
@@ -11,43 +10,43 @@ import Autoplay from "embla-carousel-autoplay";
 const ImageCarousel = () => {
   const images = [
     {
-      src: "/lovable-uploads/db69c9f5-1a37-4de9-84ba-83eec330e7d7.png",
+      src: "/lovable-uploads/db69c9f5-1a37-4de9-84ba-83eec330e7d7.webp",
       alt: "BMRS students visit to National Remote Sensing Centre"
     },
     {
-      src: "/lovable-uploads/6c1bcfd3-0725-4784-932e-41ab4b43eb30.png",
+      src: "/lovable-uploads/6c1bcfd3-0725-4784-932e-41ab4b43eb30.webp",
       alt: "BMRS SSC Toppers 2024-2025 achievements"
     },
     {
-      src: "/lovable-uploads/3d2c8101-41e7-4789-a7cd-9dfb63d82806.png",
+      src: "/lovable-uploads/3d2c8101-41e7-4789-a7cd-9dfb63d82806.webp",
       alt: "Sports activities - Kabaddi competition"
     },
     {
-      src: "/lovable-uploads/cdc0fa74-9d58-43cd-9ee4-e6357aafb05a.png",
+      src: "/lovable-uploads/cdc0fa74-9d58-43cd-9ee4-e6357aafb05a.webp",
       alt: "School assembly and morning activities"
     },
     {
-      src: "/lovable-uploads/323bb2f7-a65b-44d9-9d78-20da9531097d.png",
+      src: "/lovable-uploads/323bb2f7-a65b-44d9-9d78-20da9531097d.webp",
       alt: "Cultural event - Traditional dance performances"
     },
     {
-      src: "/lovable-uploads/5155050f-e127-4a71-bf95-d9eb1caf73cd.png",
+      src: "/lovable-uploads/5155050f-e127-4a71-bf95-d9eb1caf73cd.webp",
       alt: "Cultural program - Classical dance performance"
     },
     {
-      src: "/lovable-uploads/501e9147-d192-4ecb-98d8-21cc820c40d0.png",
+      src: "/lovable-uploads/501e9147-d192-4ecb-98d8-21cc820c40d0.webp",
       alt: "Students in science exhibition"
     },
     {
-      src: "/lovable-uploads/c01ece17-b55f-4278-aa0c-5d2710d15453.png",
+      src: "/lovable-uploads/c01ece17-b55f-4278-aa0c-5d2710d15453.webp",
       alt: "Sports activities - Kabaddi"
     },
     {
-      src: "/lovable-uploads/7871e098-d1b8-4c35-a1d9-0ca06df3f4fe.png",
+      src: "/lovable-uploads/7871e098-d1b8-4c35-a1d9-0ca06df3f4fe.webp",
       alt: "Cultural dance performance"
     },
     {
-      src: "/lovable-uploads/40f4f173-ccff-4dce-a285-2900c4482c3a.png",
+      src: "/lovable-uploads/40f4f173-ccff-4dce-a285-2900c4482c3a.webp",
       alt: "Sports competition"
     }
   ];
@@ -59,7 +58,7 @@ const ImageCarousel = () => {
           className="w-full"
           plugins={[
             Autoplay({
-              delay: 4000,
+              delay: 6000,
             }),
           ]}
           opts={{
@@ -77,13 +76,13 @@ const ImageCarousel = () => {
                     className="w-full h-full object-cover object-center"
                   />
                   <div className="absolute inset-0 bg-black/40"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="absolute bottom-0 left-0 right-0 pb-6 sm:pb-10 bg-gradient-to-t from-black/70 via-black/40 to-transparent">
                     <div className="text-center text-white max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">
-                        Life at BMRS
+                      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
+                        BMRS Group Of Schools
                       </h2>
-                      <p className="text-base sm:text-lg md:text-xl lg:text-2xl opacity-90 leading-relaxed">
-                        Discover the vibrant campus life, activities, and memorable moments at BMRS Group of Schools
+                      <p className="text-base sm:text-lg md:text-xl lg:text-2xl opacity-90">
+                        A Partnership For Your Child's Success
                       </p>
                     </div>
                   </div>
