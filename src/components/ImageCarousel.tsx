@@ -5,7 +5,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
 
 const ImageCarousel = () => {
   const images = [
@@ -56,11 +55,6 @@ const ImageCarousel = () => {
       <div className="max-w-full mx-auto">
         <Carousel 
           className="w-full"
-          plugins={[
-            Autoplay({
-              delay: 6000,
-            }),
-          ]}
           opts={{
             align: "start",
             loop: true,

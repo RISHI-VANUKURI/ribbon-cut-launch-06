@@ -64,20 +64,32 @@ const Index = () => {
     setShowVisitForm(false);
   };
 
+  const handleNavClick = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const headerHeight = 80; // Account for fixed header
+      const elementPosition = element.offsetTop - headerHeight;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <div className="relative flex">
       {/* Floating Left Sidebar Nav */}
       <nav className="hidden lg:flex fixed top-1/2 -translate-y-1/2 left-4 z-[9999] flex-col space-y-3 bg-white/80 backdrop-blur-md rounded-xl px-2 py-3 shadow-xl  hover:w-40 transition-all duration-300 overflow-hidden">
         {['Slides', 'welcome', 'mission', 'stats', 'testimonials', 'contact'].map((id) => (
-          <a
+          <button
             key={id}
-            href={`#${id}`}
+            onClick={() => handleNavClick(id)}
             className={`px-4 py-2 rounded-lg text-sm font-semibold transition text-center whitespace-nowrap ${
               activeSection === id ? 'bg-gold text-white' : 'text-navy hover:bg-gold/20'
             }`}
           >
             {id.charAt(0).toUpperCase() + id.slice(1)}
-          </a>
+          </button>
         ))}
       </nav>
 
