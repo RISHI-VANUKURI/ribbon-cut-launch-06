@@ -42,7 +42,7 @@ const Index = () => {
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['Slides', 'welcome', 'mission', 'stats', 'testimonials', 'contact'];
-      const scrollPosition = window.scrollY + 120; // Account for header height
+      const scrollPosition = window.scrollY + 100; // Adjusted for better section detection
       
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i]);
@@ -68,7 +68,7 @@ const Index = () => {
   const handleNavClick = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      const headerHeight = 120; // Account for navigation + updates bar
+      const headerHeight = 80; // Reduced offset to show sections higher up
       const elementPosition = element.offsetTop - headerHeight;
       window.scrollTo({
         top: Math.max(0, elementPosition),
