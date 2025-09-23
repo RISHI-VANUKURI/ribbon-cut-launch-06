@@ -57,7 +57,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-navy to-blue-800 text-white">
+      <section id="hero" className="relative py-20 bg-gradient-to-r from-navy to-blue-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fadeInUp">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
           <p className="text-xl max-w-3xl mx-auto">
@@ -67,7 +67,7 @@ const Contact = () => {
       </section>
 
       {/* Campus Locations */}
-      <section className="py-16 bg-white">
+      <section id="locations" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl font-bold text-navy mb-4">Find Us At</h2>
@@ -154,7 +154,7 @@ const Contact = () => {
         </div>
       </section>
 {/* Contact Information & Form */}
-<section className="py-16 bg-white">
+<section id="contact-info" className="py-16 bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="grid lg:grid-cols-2 gap-12">
       {/* Contact Information */}
@@ -384,7 +384,7 @@ const Contact = () => {
 
 
       {/* Campus Visit CTA */}
-      <section className="py-16 bg-gray-50">
+      <section id="visit-cta" className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 animate-fadeInUp">
           <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6">
             Schedule a Campus Visit

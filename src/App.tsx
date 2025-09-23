@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import FloatingGalleryButton from "./components/FloatingGalleryButton";
+import FloatingNavigation from "./components/FloatingNavigation";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Academics from "./pages/Academics";
@@ -18,7 +19,7 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-// Component to handle scroll to top on route change
+// Component to handle scroll to top on route change and floating navigation
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
@@ -26,7 +27,56 @@ const ScrollToTop = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  return null;
+  // Define sections for each page
+  const getPageSections = () => {
+    switch (pathname) {
+      case '/':
+        return [
+          { id: 'slides', label: 'Slides' },
+          { id: 'welcome', label: 'Welcome' },
+          { id: 'mission', label: 'Mission' },
+          { id: 'stats', label: 'Stats' },
+          { id: 'testimonials', label: 'Testimonials' },
+          { id: 'contact', label: 'Contact' }
+        ];
+      case '/about':
+        return [
+          { id: 'hero', label: 'About' },
+          { id: 'story', label: 'Story' },
+          { id: 'foundation', label: 'Foundation' },
+          { id: 'leadership', label: 'Leadership' },
+          { id: 'facilities', label: 'Facilities' }
+        ];
+      case '/academics':
+        return [
+          { id: 'hero', label: 'Academics' },
+          { id: 'curriculum', label: 'Curriculum' },
+          { id: 'subjects', label: 'Subjects' },
+          { id: 'methodology', label: 'Teaching' },
+          { id: 'assessment', label: 'Assessment' }
+        ];
+      case '/activities':
+        return [
+          { id: 'hero', label: 'Activities' },
+          { id: 'excellence', label: 'Excellence' },
+          { id: 'sports', label: 'Sports' },
+          { id: 'clubs', label: 'Clubs' },
+          { id: 'achievements', label: 'Achievements' },
+          { id: 'testimonials', label: 'Reviews' }
+        ];
+      case '/contact':
+        return [
+          { id: 'hero', label: 'Contact' },
+          { id: 'locations', label: 'Locations' },
+          { id: 'contact-info', label: 'Info' },
+          { id: 'visit-cta', label: 'Visit' }
+        ];
+      default:
+        return [];
+    }
+  };
+
+  return <FloatingNavigation sections={getPageSections()} />;
 };
 
 const App = () => (

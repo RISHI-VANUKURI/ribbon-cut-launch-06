@@ -38,7 +38,7 @@ useEffect(() => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-navy to-blue-800 text-white">
+      <section id="hero" className="relative py-20 bg-gradient-to-r from-navy to-blue-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fadeInUp">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">About BMRS Group of Schools</h1>
           <p className="text-xl max-w-3xl mx-auto">
@@ -47,7 +47,7 @@ useEffect(() => {
         </div>
       </section>
 
-<section className="py-16 bg-white">
+<section id="story" className="py-16 bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="grid lg:grid-cols-2 gap-12 items-center">
       
@@ -89,7 +89,7 @@ useEffect(() => {
 
 
       {/* Vision, Mission, Values */}
-      <section className="py-16 bg-gray-50">
+      <section id="foundation" className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
@@ -144,7 +144,7 @@ useEffect(() => {
       </section>
 
      {/* Messages from Leadership */}
-<section className="py-16 bg-white">
+<section id="leadership" className="py-16 bg-white">
   <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
     
     {/* Principal's Message */}
@@ -244,7 +244,7 @@ Education is the strongest foundation for progress. It is my hope that this inst
 </section>
 
 
-{/* Campus Highlights */}<section className="py-16 bg-gray-50">
+{/* Campus Highlights */}<section id="facilities" className="py-16 bg-gray-50">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-12 animate-fadeInUp">
       <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">Campus Highlights</h2>

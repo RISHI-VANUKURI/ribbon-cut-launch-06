@@ -23,7 +23,6 @@ const Index = () => {
   const [parentName, setParentName] = useState('');
   const [childName, setChildName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
-  const [activeSection, setActiveSection] = useState('');
 
  useEffect(() => {
   const popupShown = sessionStorage.getItem("admissionPopupShown");
@@ -38,26 +37,6 @@ const Index = () => {
   }
 }, []);
 
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['Slides', 'welcome', 'mission', 'stats', 'testimonials', 'contact'];
-      const scrollPosition = window.scrollY + 100; // Adjusted for better section detection
-      
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const el = document.getElementById(sections[i]);
-        if (el && el.offsetTop <= scrollPosition) {
-          setActiveSection(sections[i]);
-          break;
-        }
-      }
-    };
-    
-    handleScroll(); // Set initial active section
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   const handleSendWhatsApp = () => {
     const phone = branchContacts[selectedBranch] || '919000000000';
     const msg = `Hello BMRS Schools,%0aWe would like to schedule a visit at your ${selectedBranch} branch.%0aHere are the details:%0a👨‍👩‍👧 Parent Name: ${parentName}%0a👧 Child Name: ${childName}%0a📞 Contact Number: ${phoneNumber}%0a📅 Date: ${selectedDate}%0a⏰ Time: ${selectedTime}%0aPlease confirm our appointment. Thank you!`;
@@ -65,40 +44,13 @@ const Index = () => {
     setShowVisitForm(false);
   };
 
-  const handleNavClick = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const headerHeight = 80; // Reduced offset to show sections higher up
-      const elementPosition = element.offsetTop - headerHeight;
-      window.scrollTo({
-        top: Math.max(0, elementPosition),
-        behavior: 'smooth'
-      });
-    }
-  };
-
   return (
     <div className="relative flex">
-      {/* Floating Left Sidebar Nav */}
-      <nav className="hidden lg:flex fixed top-1/2 -translate-y-1/2 left-4 z-[9999] flex-col space-y-3 bg-white/80 backdrop-blur-md rounded-xl px-2 py-3 shadow-xl  hover:w-40 transition-all duration-300 overflow-hidden">
-        {['Slides', 'welcome', 'mission', 'stats', 'testimonials', 'contact'].map((id) => (
-          <button
-            key={id}
-            onClick={() => handleNavClick(id)}
-            className={`px-4 py-2 rounded-lg text-sm font-semibold transition text-center whitespace-nowrap ${
-              activeSection === id ? 'bg-gold text-white' : 'text-navy hover:bg-gold/20'
-            }`}
-          >
-            {id.charAt(0).toUpperCase() + id.slice(1)}
-          </button>
-        ))}
-      </nav>
-
       {/* Main Content */}
       <div className="w-full pt-10">
         <AdmissionPopup isOpen={showAdmissionPopup} onClose={() => setShowAdmissionPopup(false)} />
 
-        <div id="Slides">
+        <div id="slides">
           <ImageCarousel />
         </div>
 

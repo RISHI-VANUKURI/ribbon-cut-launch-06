@@ -197,7 +197,7 @@ const AchievementList = () => {
 const Activities = () => {
   return (
     <div className="min-h-screen">
-      <section className="relative py-20 bg-gradient-to-r from-navy to-blue-800 text-white">
+      <section id="hero" className="relative py-20 bg-gradient-to-r from-navy to-blue-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Activities & Programs</h1>
           <p className="text-xl max-w-3xl mx-auto">
@@ -206,7 +206,7 @@ const Activities = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section id="excellence" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-navy mb-6">Co-Curricular Excellence</h2>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto">
@@ -216,7 +216,7 @@ const Activities = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      <section id="sports" className="py-20 bg-gray-50">
         <div className="text-center mb-12 animate-fadeInUp">
           <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">Sports & Games</h2>
           <p className="text-gray-600 max-w-xl mx-auto">
@@ -226,7 +226,7 @@ const Activities = () => {
         <SportsCarousel />
       </section>
 
-      <section className="py-16 bg-gray-50 relative">
+      <section id="clubs" className="py-16 bg-gray-50 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6">
             Academic Clubs & Societies
@@ -257,7 +257,7 @@ const Activities = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section id="achievements" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">Student Achievements</h2>
@@ -266,7 +266,7 @@ const Activities = () => {
           <AchievementList />
         </div>
       </section>
-      <section className="py-16 bg-navy text-white">
+      <section id="testimonials" className="py-16 bg-navy text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Students Say</h2>

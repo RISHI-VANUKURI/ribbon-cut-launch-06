@@ -63,7 +63,7 @@ const Academics = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-navy to-blue-800 text-white">
+      <section id="hero" className="relative py-20 bg-gradient-to-r from-navy to-blue-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fadeInUp">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Academics</h1>
           <p className="text-xl max-w-3xl mx-auto">
@@ -73,7 +73,7 @@ const Academics = () => {
       </section>
 
       {/* Curriculum Overview */}
-      <section className="py-16 bg-white">
+      <section id="curriculum" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">Curriculum Overview</h2>
@@ -148,7 +148,7 @@ const Academics = () => {
       </section>
 
       {/* Subject Areas */}
-      <section className="py-16 bg-gray-50">
+      <section id="subjects" className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">Subject Areas</h2>
@@ -206,7 +206,7 @@ const Academics = () => {
 
 
 {/* Teaching Methodology */}
-<section className="py-20 bg-white relative overflow-hidden">
+<section id="methodology" className="py-20 bg-white relative overflow-hidden">
   <div className="absolute -top-10 -left-10 w-96 h-96 bg-gradient-to-br from-gold to-yellow-300 opacity-20 rounded-full animate-pulse-slow" />
   <div className="absolute bottom-0 right-0 w-72 h-72 bg-gradient-to-tr from-blue-300 to-navy opacity-10 rounded-full animate-pulse-slow" />
 
@@ -286,7 +286,7 @@ const Academics = () => {
   </div>
 </section>
 {/* Assessment System */}
-<section className="py-20 bg-gray-50 relative overflow-hidden">
+<section id="assessment" className="py-20 bg-gray-50 relative overflow-hidden">
   <div className="absolute -top-16 left-0 w-96 h-96 bg-gradient-to-br from-blue-200 to-navy opacity-10 rounded-full animate-pulse-slow" />
   <div className="absolute bottom-0 right-0 w-72 h-72 bg-gradient-to-tr from-yellow-200 to-gold opacity-10 rounded-full animate-pulse-slow" />
 
