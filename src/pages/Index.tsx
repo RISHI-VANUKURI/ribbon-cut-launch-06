@@ -42,17 +42,18 @@ const Index = () => {
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['Slides', 'welcome', 'mission', 'stats', 'testimonials', 'contact'];
-      for (const id of sections) {
-        const el = document.getElementById(id);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top <= 100 && rect.bottom >= 100) {
-            setActiveSection(id);
-            break;
-          }
+      const scrollPosition = window.scrollY + 120; // Account for header height
+      
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const el = document.getElementById(sections[i]);
+        if (el && el.offsetTop <= scrollPosition) {
+          setActiveSection(sections[i]);
+          break;
         }
       }
     };
+    
+    handleScroll(); // Set initial active section
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -67,10 +68,10 @@ const Index = () => {
   const handleNavClick = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      const headerHeight = 80; // Account for fixed header
+      const headerHeight = 120; // Account for navigation + updates bar
       const elementPosition = element.offsetTop - headerHeight;
       window.scrollTo({
-        top: elementPosition,
+        top: Math.max(0, elementPosition),
         behavior: 'smooth'
       });
     }
