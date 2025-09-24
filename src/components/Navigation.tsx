@@ -33,28 +33,33 @@ const Navigation = () => {
               alt="BMRS Group of Schools Logo"
               className="h-20 w-20 mr-3 rounded-full object-cover border-3 border-navy shadow-lg hover-scale animate-bounceIn"
             />
-            <Link to="/" className="flex flex-col animate-fadeInUp delay-200">
-              <span
-                className="text-xl md:text-3xl font-bold leading-tight text-yellow-400"
-                style={{
-                  textShadow:
-                    "2px 2px 4px rgba(0,0,0,0.5), -1px -1px 2px rgba(255,255,255,0.8)",
-                  WebkitTextStroke: "1px #dc2626",
-                }}
-              >
-                BMRS
+            <div className="flex flex-col animate-fadeInUp delay-200">
+              <Link to="/" className="flex flex-col">
+                <span
+                  className="text-xl md:text-3xl font-bold leading-tight text-yellow-400"
+                  style={{
+                    textShadow:
+                      "2px 2px 4px rgba(0,0,0,0.5), -1px -1px 2px rgba(255,255,255,0.8)",
+                    WebkitTextStroke: "1px #dc2626",
+                  }}
+                >
+                  BMRS
+                </span>
+                <span
+                  className="text-sm md:text-lg font-black leading-tight text-red-600"
+                  style={{
+                    textShadow:
+                      "2px 2px 4px rgba(0,0,0,0.5), -1px -1px 2px rgba(255,255,255,0.8)",
+                    WebkitTextStroke: "0.5px #fbbf24",
+                  }}
+                >
+                  Group of Schools
+                </span>
+              </Link>
+              <span className="text-xs md:text-sm font-medium text-gray-600 mt-1 pl-2">
+                - A PARTNERSHIP FOR YOUR CHILD'S SUCCESS
               </span>
-              <span
-                className="text-sm md:text-lg font-black leading-tight text-red-600"
-                style={{
-                  textShadow:
-                    "2px 2px 4px rgba(0,0,0,0.5), -1px -1px 2px rgba(255,255,255,0.8)",
-                  WebkitTextStroke: "0.5px #fbbf24",
-                }}
-              >
-                Group of Schools
-              </span>
-            </Link>
+            </div>
           </div>
 
           {/* Desktop Navigation */}
