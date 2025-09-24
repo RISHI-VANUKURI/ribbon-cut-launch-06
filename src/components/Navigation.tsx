@@ -58,7 +58,7 @@ const Navigation = () => {
           </div>
 
           {/* Tagline positioned at bottom between logo and nav */}
-          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-x-14">
+          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-x-24">
             <span className="text-xs md:text-sm font-medium text-navy">
               - A PARTNERSHIP FOR YOUR CHILD'S SUCCESS
             </span>
