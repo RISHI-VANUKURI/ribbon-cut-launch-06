@@ -305,42 +305,31 @@ const filteredEvents = selectedCategory === 'all'
                   </Card>
                 </DialogTrigger>
                 
-                <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto">
-                  <DialogHeader className="sticky top-0 bg-white z-10 pb-4 border-b">
+                <DialogContent className="max-w-6xl max-h-[90vh] flex flex-col">
+                  <DialogHeader className="flex-shrink-0 pb-4 border-b">
                     <DialogTitle className="text-2xl font-bold text-navy">
                       {event.title}
                     </DialogTitle>
                     <p className="text-gray-600">{event.description}</p>
                   </DialogHeader>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-                    {event.photos.map((photo) => (
-                      <Dialog key={photo.id}>
-                        <DialogTrigger asChild>
-                          <div className="relative group cursor-pointer">
-                            <div className="aspect-square overflow-hidden rounded-lg">
-                              <img
-                                src={photo.src}
-                                alt={photo.alt}
-                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                              />
-                            </div>
-                            <div className="mt-2">
-                              <p className="text-sm font-medium text-navy">{photo.title}</p>
-                            </div>
+                  <div className="flex-1 overflow-y-auto p-4">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      {event.photos.map((photo) => (
+                        <div key={photo.id} className="relative group">
+                          <div className="aspect-square overflow-hidden rounded-lg">
+                            <img
+                              src={photo.src}
+                              alt={photo.alt}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            />
                           </div>
-                        </DialogTrigger>
-
-                        {/* Fullscreen image preview */}
-                        <DialogContent className="max-w-6xl max-h-[95vh] p-0 bg-transparent border-none shadow-none">
-                          <img
-                            src={photo.src}
-                            alt={photo.alt}
-                            className="w-full h-full object-contain rounded-lg"
-                          />
-                        </DialogContent>
-                      </Dialog>
-                    ))}
+                          <div className="mt-2">
+                            <p className="text-sm font-medium text-navy">{photo.title}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </DialogContent>
               </Dialog>
