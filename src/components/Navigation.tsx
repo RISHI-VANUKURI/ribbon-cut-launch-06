@@ -44,24 +44,22 @@ const Navigation = () => {
               >
                 BMRS
               </span>
-              <span
-                className="text-sm md:text-lg font-black leading-tight text-red-600"
-                style={{
-                  textShadow:
-                    "2px 2px 4px rgba(0,0,0,0.5), -1px -1px 2px rgba(255,255,255,0.8)",
-                  WebkitTextStroke: "0.5px #fbbf24",
-                }}
-              >
-                Group of Schools
-              </span>
+              <div className="flex items-end">
+                <span
+                  className="text-sm md:text-lg font-black leading-tight text-red-600"
+                  style={{
+                    textShadow:
+                      "2px 2px 4px rgba(0,0,0,0.5), -1px -1px 2px rgba(255,255,255,0.8)",
+                    WebkitTextStroke: "0.5px #fbbf24",
+                  }}
+                >
+                  Group of Schools
+                </span>
+                <span className="text-xs md:text-sm font-medium text-navy ml-4 mb-0">
+                  - A PARTNERSHIP FOR YOUR CHILD'S SUCCESS
+                </span>
+              </div>
             </Link>
-          </div>
-
-          {/* Tagline positioned at bottom between logo and nav */}
-          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-x-24">
-            <span className="text-xs md:text-sm font-medium text-navy">
-              - A PARTNERSHIP FOR YOUR CHILD'S SUCCESS
-            </span>
           </div>
 
           {/* Desktop Navigation */}
