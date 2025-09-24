@@ -305,15 +305,15 @@ const filteredEvents = selectedCategory === 'all'
                   </Card>
                 </DialogTrigger>
                 
-                <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
-                  <DialogHeader>
+                <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto">
+                  <DialogHeader className="sticky top-0 bg-white z-10 pb-4 border-b">
                     <DialogTitle className="text-2xl font-bold text-navy">
                       {event.title}
                     </DialogTitle>
                     <p className="text-gray-600">{event.description}</p>
                   </DialogHeader>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
                     {event.photos.map((photo) => (
                       <Dialog key={photo.id}>
                         <DialogTrigger asChild>
